@@ -110,6 +110,23 @@ nptel-cloud-mcq/
 
 ---
 
+## 📊 Private Footfall & Analytics Tracking
+
+Traffic and visitor footfall are tracked privately using **Google Analytics 4 (GA4)**. 
+- **100% Private**: No counters or badges are shown on the website. Only you (logged into your Google Analytics account) can view visitor counts, live footfalls, and page popularity.
+- **SPA Route Tracking**: Accurately counts visits across specific courses and quiz weeks.
+
+### Setting Up Your Measurement ID:
+1. Create a free property at [analytics.google.com](https://analytics.google.com) and copy your **Measurement ID** (`G-XXXXXXXXXX`).
+2. Add it to your `.env` file (or your hosting platform's environment variables):
+   ```env
+   VITE_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+   ```
+   *(Alternatively, paste it into `src/config/analytics.js`)*
+3. Rebuild and deploy!
+
+---
+
 <p align="center">
   Built with ❤️ for NPTEL students everywhere
 </p>
