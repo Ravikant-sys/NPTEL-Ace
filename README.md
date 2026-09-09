@@ -12,6 +12,19 @@ A **Duolingo-inspired multi-course practice platform** for NPTEL courses — pra
 
 ---
 
+## 📚 Supported Subjects & Courses
+
+NPTEL Ace currently includes curated assignment questions, instant concept solutions, and grand tests for the following subjects:
+
+| Subject Name | Icon | Weeks Available | Key Topics Covered |
+| :--- | :---: | :---: | :--- |
+| **Cloud Computing** | ☁️ | Weeks 1 – 12 + Grand Test | Virtualization, Distributed Systems, Cloud Architecture, SLA, Azure, GCP |
+| **Blockchain & Its Applications** | ⛓️ | Weeks 1 – 11 + Grand Test | Cryptography, Consensus Algorithms, Bitcoin, Ethereum, Smart Contracts |
+| **Introduction to Internet of Things (IoT)** | 📡 | Weeks 1 – 5 + Grand Test | Sensors, Actuators, Wireless Sensor Networks, IoT Protocols & M2M |
+| **Entrepreneurship** | 🚀 | Weeks 1 – 6 + Grand Test | Ideation, Customer Discovery, Prototyping, Disruption & Business Scaling |
+
+---
+
 ## ✨ Features
 
 ### 🎮 Duolingo-Style Quiz Flow
