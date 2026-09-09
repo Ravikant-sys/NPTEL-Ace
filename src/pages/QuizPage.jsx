@@ -8,10 +8,12 @@ import MilestoneOverlay from '../components/MilestoneOverlay';
 import CelebrationVideo from '../components/CelebrationVideo';
 import cloudData from '../data/cloud.json';
 import blockchainData from '../data/blockchain.json';
+import iotData from '../data/iot.json';
 
 const DATA_MAP = {
   cloud: cloudData,
   blockchain: blockchainData,
+  iot: iotData,
 };
 
 export default function QuizPage() {

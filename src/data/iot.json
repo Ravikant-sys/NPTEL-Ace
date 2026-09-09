@@ -1,0 +1,918 @@
+{
+  "1": [
+    {
+      "q": "[Week 1] According to the ITU Internet Report 2005 discussed in the lecture, the future Internet is expected to become wider and more complex mainly because:",
+      "options": [
+        "Humans will completely stop using the Internet",
+        "Most Internet traffic may flow between devices and different kinds of things",
+        "Only desktop computers will remain connected",
+        "Internet communication will be restricted to email services"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "The ITU report describes a future where humans may become a minority as generators and receivers of traffic. Instead, communication will increasingly happen between devices and “things,” forming the Internet of Things. See lecture 1 Introduction to IoT — Part-I @ 03:10"
+    },
+    {
+      "q": "[Week 1] Which of the following are characteristics of IoT systems?",
+      "options": [
+        "Efficient and scalable architecture",
+        "Unambiguous naming and addressing",
+        "Presence of sleeping nodes, mobile nodes, and non-IP devices",
+        "Guaranteed continuous connectivity for every device at all times"
+      ],
+      "correctIndex": [
+        0,
+        1,
+        2
+      ],
+      "isMSQ": true,
+      "solution": "IoT systems require scalable architecture, clear naming and addressing, and must support heterogeneous devices such as sleeping nodes, mobile nodes, and non-IP devices. However, IoT systems may have intermittent connectivity, so option d is incorrect. See lecture 1: Introduction to IoT — Part-I @ 06:05"
+    },
+    {
+      "q": "[Week 1] In the lecture, “Smart Dust” refers to:",
+      "options": [
+        "A cloud storage model for IoT data",
+        "A large-scale wireless router used in smart cities",
+        "Very tiny computing devices that can be sprayed or injected for sensing purposes",
+        "A type of IPv6 address used in IoT networks"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Smart Dust refers to extremely small computing devices, smaller than a grain of sand, that can be used to measure chemicals in soil or diagnose problems in the human body. See lecture 1 Introduction to IoT — Part-I @ 10:40"
+    },
+    {
+      "q": "[Week 1] Which statement best explains the relation between IoT and M2M communication?",
+      "options": [
+        "IoT and M2M are exactly the same",
+        "M2M is broader than IoT because it includes people and applications",
+        "M2M is a part of IoT, while IoT has a broader scope of interactions",
+        "IoT does not include machine-to-machine interaction"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "M2M focuses mainly on communication among machines and devices. IoT is broader because it includes interactions between things, people, applications, and systems. See lecture 1 Introduction to IoT — Part-I @ 19:30"
+    },
+    {
+      "q": "[Week 1] State whether the following statement is True or False. Statement: In the Web of Things, IoT sensors are replaced completely by cloud databases.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "The Web of Things does not replace sensors. Sensors remain responsible for collecting physical-world data, while web technologies help expose and access IoT resources. See lecture 1 Introduction to IoT — Part-I @ 22:50"
+    },
+    {
+      "q": "[Week 1] In an IoT network configuration, local addresses may be valid only within a gateway’s domain. The same local address may even appear under another gateway. The main advantage of this strategy is:",
+      "options": [
+        "It increases unnecessary address consumption",
+        "It helps conserve address space",
+        "It removes the requirement of a gateway",
+        "It prevents any device from communicating with the Internet"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Using locally valid addresses within a gateway’s domain allows address reuse across different gateway domains. This helps avoid unnecessary wastage of global addresses. See lecture 2 Introduction to IoT — Part-II @ 05:30"
+    },
+    {
+      "q": "[Week 1] Which of the following functions are associated with IoT gateways in the addressing strategy discussed in the lecture?",
+      "options": [
+        "Providing Internet connectivity",
+        "Supporting IoT LAN intra-connectivity",
+        "Obtaining upstream address prefixes using mechanisms such as DHCPv6",
+        "Delegating addresses to nodes using SLAAC"
+      ],
+      "correctIndex": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "isMSQ": true,
+      "solution": "IoT gateways can provide Internet connectivity and IoT LAN intra-connectivity. They may obtain upstream prefixes through DHCPv6 and delegate them to nodes using SLAAC. See lecture 2 Introduction to IoT — Part-II @ 09:40"
+    },
+    {
+      "q": "[Week 1] Which of the following is true about IPv6 compared to IPv4?",
+      "options": [
+        "IPv6 uses dotted decimal notation",
+        "IPv6 has a smaller address space than IPv4",
+        "IPv6 uses hexadecimal notation and supports a much larger address space",
+        "IPv6 requires broadcast addresses in the same way as IPv4"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "IPv4 uses 32-bit addresses and dotted decimal notation, whereas IPv6 uses 128- bit addresses and hexadecimal notation. This makes IPv6 more suitable for large-scale IoT addressing. See lecture 2 Introduction to IoT — Part-II @ 16:50"
+    },
+    {
+      "q": "[Week 1] Which statement correctly represents the design expectation from a good sensor?",
+      "options": [
+        "It should influence the measured property significantly",
+        "It should respond strongly to unrelated physical properties",
+        "It should be sensitive to the measured property and should not disturb it",
+        "It should always produce random output"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "A good sensor should measure the desired property, remain insensitive to unrelated properties, and should not influence or alter the measured quantity. See lecture 3 Sensing @ 13:00"
+    },
+    {
+      "q": "[Week 1] Which of the following statements about sensor resolution are correct?",
+      "options": [
+        "Sensor resolution is the smallest change that the sensor can detect",
+        "For a digital sensor, resolution is related to the smallest digital output change it can process",
+        "Sensor resolution and sensor accuracy always refer to exactly the same property",
+        "Sensor accuracy does not depend only on resolution"
+      ],
+      "correctIndex": [
+        0,
+        1,
+        3
+      ],
+      "isMSQ": true,
+      "solution": "Resolution refers to the smallest detectable change in the measured quantity. In digital sensors, it is related to the smallest digital output step. However, accuracy and resolution are not the same; a high-resolution sensor may still be inaccurate if it has bias or calibration errors. See lecture 3 Sensing @ 14:10"
+    },
+    {
+      "q": "[Week 1] State True or False. An accelerometer that measures acceleration along the x, y, and z coordinate axes is classified as a vector sensor.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "A vector sensor measures quantities that have both magnitude and direction or orientation. Since an accelerometer measures acceleration components along different coordinate axes, such as x, y, and z, it is classified as a vector sensor. See lecture 3 Sensing @ 18:40"
+    },
+    {
+      "q": "[Week 1] A sensor gives different output for the same input value depending on whether that input was reached by increasing or decreasing the measured quantity. This error is called:",
+      "options": [
+        "Quantization error",
+        "Hysteresis error",
+        "IPv6 translation error",
+        "Gateway prefix error"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Hysteresis error occurs when the sensor output depends on the previous input history. The same present input may give different readings depending on whether the input was approached from a lower or higher value. See lecture 3 Sensing @ 22:40"
+    },
+    {
+      "q": "[Week 1] State True or False A hydraulic actuator can produce considerable force because liquids are nearly incompressible.",
+      "options": [
+        "False",
+        "True"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "A hydraulic actuator uses hydraulic fluid to generate mechanical motion. Since liquids are nearly incompressible, hydraulic actuators can exert large forces. See lecture 4 Actuation @ 06:20"
+    },
+    {
+      "q": "[Week 1] Which of the following statements are correct about Shape Memory Polymer actuators?",
+      "options": [
+        "They may respond to stimuli such as light, heat, electrical, magnetic, pH, or moisture changes",
+        "They can show high strain recovery",
+        "They may have properties such as low density and biocompatibility",
+        "They are used only as passive temperature sensors"
+      ],
+      "correctIndex": [
+        0,
+        1,
+        2
+      ],
+      "isMSQ": true,
+      "solution": "Shape Memory Polymer actuators can respond to different stimuli and are known for features such as low density, high strain recovery, biocompatibility, and biodegradability. They are actuator materials, not merely passive temperature sensors. See lecture 4 Actuation @ 18:20"
+    },
+    {
+      "q": "[Week 1] State whether the following statement is True or False. Statement: According to the IoT implementation example discussed in the lecture, data gathered by a sensor travels through a gateway and a proxy server before arriving at the cloud server.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "In the example IoT implementation, the sensor first collects the data. The data then passes through the gateway and proxy server before reaching the cloud server for further processing and analytics. See Lecture 5: Basics of IoT Networking — Part-I @ 07:30 ************END***********"
+    }
+  ],
+  "2": [
+    {
+      "q": "[Week 2] In MQTT, which field of a published message is used by the broker as routing information?",
+      "options": [
+        "Topic",
+        "Client identifier",
+        "Payload length",
+        "Session timer"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "The MQTT broker dispatches messages between senders and receivers. The topic included in a published message provides the routing information that the broker uses to deliver the message to clients subscribed to the matching topic. Answer Location: Week 2, Module 6 (Basics of IoT Networking - Part II) @ 08:27"
+    },
+    {
+      "q": "[Week 2] Which of the following statements about MQTT topic wildcards are correct?",
+      "options": [
+        "The plus sign (+) matches an arbitrary value at exactly one hierarchy level.",
+        "The hash sign (#) can be used to subscribe to all underlying hierarchy levels.",
+        "The subscription house/# matches only the exact topic house.",
+        "The subscription house/+/temperature can match house/kitchen/temperature."
+      ],
+      "correctIndex": [
+        0,
+        1,
+        3
+      ],
+      "isMSQ": true,
+      "solution": "The plus sign (+) is a single-level wildcard, whereas the hash sign (#) is a multilevel wildcard. Thus, house/+/temperature can match house/kitchen/temperature, and house/# matches all topics whose hierarchy begins with house, not only the exact topic house. Answer Location: Week 2, Module 6 (Basics of IoT Networking - Part II) @ 12:01"
+    },
+    {
+      "q": "[Week 2] Which of the following are main stages of Secure MQTT (SMQTT)?",
+      "options": [
+        "Setup",
+        "Publish",
+        "Decryption",
+        "Route discovery"
+      ],
+      "correctIndex": [
+        0,
+        1,
+        2
+      ],
+      "isMSQ": true,
+      "solution": "SMQTT consists of four main stages: setup, encryption, publish, and decryption. Route discovery is not one of the SMQTT stages. Answer Location: Week 2, Module 6 (Basics of IoT Networking - Part II) @ 13:45"
+    },
+    {
+      "q": "[Week 2] At the transport layer, CoAP (Constrained Application Protocol) operates over which protocol?",
+      "options": [
+        "TCP",
+        "UDP",
+        "SCTP",
+        "FTP"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "CoAP is designed for constrained environments and operates over UDP at the transport layer. Its lightweight design helps reduce communication overhead for resource-constrained IoT devices. Answer Location: Week 2, Module 7 (Basics of IoT Networking - Part III) @ 05:41"
+    },
+    {
+      "q": "[Week 2] State True or False. In CoAP, a piggyback response is carried with the acknowledgment, whereas in the separate mode, the server response is sent in a message separate from the acknowledgment.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "In the piggyback mode, the server places its response in the acknowledgment message. In the separate mode, the acknowledgment is sent first and the response is transmitted later as a separate message. Answer Location: Week 2, Module 7 (Basics of IoT Networking - Part III) @ 07:48"
+    },
+    {
+      "q": "[Week 2] Which of the following CoAP request-method mappings are correct?",
+      "options": [
+        "GET - retrieve data",
+        "PUT - create data",
+        "PUSH - update data",
+        "DELETE - delete data"
+      ],
+      "correctIndex": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "isMSQ": true,
+      "solution": "As presented in the lecture, CoAP uses GET, PUT, PUSH, and DELETE requests to retrieve, create, update, and delete data, respectively. Answer Location: Week 2, Module 7 (Basics of IoT Networking - Part III) @ 07:48"
+    },
+    {
+      "q": "[Week 2] Which AMQP frame type is used to control the message-flow rate?",
+      "options": [
+        "Transfer",
+        "Detach",
+        "Disposition",
+        "Flow"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "The Flow frame controls the rate of message flow between AMQP peers. By comparison, Transfer carries messages, Disposition communicates a change in transfer state, and Detach terminates a link. Answer Location: Week 2, Module 8 (Basics of IoT Networking - Part IV) @ 06:21"
+    },
+    {
+      "q": "[Week 2] Which of the following statements about AMQP components are correct?",
+      "options": [
+        "An exchange receives messages and routes them to queues.",
+        "A queue stores messages for business processes or consumers.",
+        "A binding specifies message-distribution rules between an exchange and queues.",
+        "A consumer must route every producer message before it reaches an exchange."
+      ],
+      "correctIndex": [
+        0,
+        1,
+        2
+      ],
+      "isMSQ": true,
+      "solution": "The main AMQP components discussed in the lecture are exchanges, queues, and bindings. An exchange receives and routes messages, a queue stores messages for consumers or business processes, and a binding defines the distribution rules connecting exchanges to queues. Answer Location: Week 2, Module 8 (Basics of IoT Networking - Part IV) @ 08:03"
+    },
+    {
+      "q": "[Week 2] Which of the following IEEE 802.15.4 variant-application pairs are correct?",
+      "options": [
+        "IEEE 802.15.4c - China",
+        "IEEE 802.15.4e - Industrial applications",
+        "IEEE 802.15.4f - Active RFID",
+        "IEEE 802.15.4g - Smart utility networks"
+      ],
+      "correctIndex": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "isMSQ": true,
+      "solution": "The lecture associates IEEE 802.15.4c with China, 802.15.4d with Japan, 802.15.4e with industrial applications, 802.15.4f with active RFID, and 802.15.4g with smart utility networks. Answer Location: Week 2, Module 9 (Connectivity Technologies - Part I) @ 09:03"
+    },
+    {
+      "q": "[Week 2] In a non-beacon-enabled IEEE 802.15.4 network, data frames are transmitted using:",
+      "options": [
+        "Slotted CSMA/CA",
+        "Unslotted CSMA/CA",
+        "Token passing",
+        "Pure TDMA only"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Non-beacon-enabled IEEE 802.15.4 networks transmit data frames using unslotted CSMA/CA. In contrast, beacon-enabled networks use slotted CSMA/CA with a superframe structure managed by the PAN coordinator. Answer Location: Week 2, Module 9 (Connectivity Technologies - Part I) @ 14:11"
+    },
+    {
+      "q": "[Week 2] Which statement correctly describes the relationship between IEEE 802.15.4 and ZigBee?",
+      "options": [
+        "IEEE 802.15.4 provides layers 1 and 2, while ZigBee extends the functionality to layer 3 and above.",
+        "ZigBee provides only the physical layer, while IEEE 802.15.4 provides all higher layers.",
+        "Both standards operate only at the application layer.",
+        "ZigBee and IEEE 802.15.4 are identical standards with no functional distinction."
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "IEEE 802.15.4 primarily specifies the physical and MAC layers. ZigBee operates on top of these layers and adds higher-layer functions, including authentication, encryption, routing, forwarding, and support for mesh networking. Answer Location: Week 2, Module 9 (Connectivity Technologies - Part I) @ 16:08"
+    },
+    {
+      "q": "[Week 2] Which of the following statements characterizes a ZigBee end device?",
+      "options": [
+        "It communicates with its parent node.",
+        "It cannot relay data for other devices.",
+        "It is a reduced-functionality device.",
+        "It forms the network root and acts as the trust center."
+      ],
+      "correctIndex": [
+        0,
+        1,
+        2
+      ],
+      "isMSQ": true,
+      "solution": "A ZigBee end device has sufficient functionality to communicate with its parent, but it cannot relay data for other devices. It is therefore a reduced-functionality device. The coordinator, not an end device, forms the network root and may act as the trust center. Answer Location: Week 2, Module 9 (Connectivity Technologies - Part I) @ 23:54"
+    },
+    {
+      "q": "[Week 2] Which option correctly describes addressing in 6LoWPAN?",
+      "options": [
+        "A 16-bit address is globally unique, while a 64-bit address is PAN-specific.",
+        "A 16-bit short address is PAN-specific and assigned by the PAN coordinator, while a 64-bit extended address is globally unique.",
+        "Both 16-bit and 64-bit addresses are globally unique and assigned by an Internet router.",
+        "Both address types are used only for multicast communication."
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "6LoWPAN supports 16-bit short addresses for PAN-specific communication; these are assigned by the PAN coordinator. It also supports 64-bit extended addresses, which are globally unique. Answer Location: Week 2, Module 10 (Connectivity Technologies - Part II) @ 04:58"
+    },
+    {
+      "q": "[Week 2] State True or False. In LOADng routing, an intermediate router may respond to a Route Request (RREQ) whenever it already has an active route to the requested destination.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "In LOADng, only the destination is permitted to respond to an RREQ. Intermediate LOADng routers are explicitly prohibited from responding, even when they have an active route to the requested destination. Answer Location: Week 2, Module 10 (Connectivity Technologies - Part II) @ 12:48"
+    },
+    {
+      "q": "[Week 2] How does a passive RFID tag obtain the power required to transmit information?",
+      "options": [
+        "It uses its own internal battery.",
+        "It is powered inductively by an RFID reader.",
+        "It receives power through a wired AIDC connection.",
+        "It does not require any source of power."
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Passive RFID tags do not have their own power supply. They must first be powered inductively by an RFID reader before they can transmit information. Active RFID tags, in contrast, have their own power supply. Answer Location: Week 2, Module 10 (Connectivity Technologies - Part II) @ 19:30 ************END***********"
+    }
+  ],
+  "3": [
+    {
+      "q": "[Week 3] State whether the following statement is true or false. Statement: There is no network layer in Wired HART",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "There is no network layer in Wired HART. See lecture 11 @ 05:22"
+    },
+    {
+      "q": "[Week 3] Zwave operates at ________ MHz in the US and ________ MHz in Europe.",
+      "options": [
+        "1008,989",
+        "908.42, 868.42",
+        "767.56,855.28",
+        "None of these"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Zwave operates at 908.42 MHz in the US and 868.42 MHz in Europe. See lecture 13 @ 3:40"
+    },
+    {
+      "q": "[Week 3] Dumb behavior of sensor nodes is in nature (as it is dependent on the effects of the environmental conditions).",
+      "options": [
+        "Temporal",
+        "Spatial",
+        "Both (a) and (b)",
+        "None of these"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "Dumb behavior of sensor nodes is Temporal in nature (as it is dependent on the effects of the environmental conditions). See lecture 15 @ 05:40"
+    },
+    {
+      "q": "[Week 3] The process of identifying channels consistently affected by interference and removing them from use is known as .",
+      "options": [
+        "Channel Trimming",
+        "Channel Flushing",
+        "Both (a) and (b)",
+        "None of these"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "Channel Blacklisting identifies channels consistently affected by interference and removes them from use. See lecture 11 @ 07:30"
+    },
+    {
+      "q": "[Week 3] The full form of NFC is",
+      "options": [
+        "Near Field Contact",
+        "Near Field Communication",
+        "Both (a) and (b)",
+        "Neither (a) nor (b)"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "The full form of NFC is Near Field Communication. See lecture 11 @ 17:44"
+    },
+    {
+      "q": "[Week 3] State true or false. NFC works on the principle of magnetic induction.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "NFC works on the principle of magnetic induction. See lecture 11 @ 21:00"
+    },
+    {
+      "q": "[Week 3] State whether the following statement is true or false. Statement: NFC tags found in supermarket products are examples of active NFC.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Passive NFC tags found in supermarket products are examples of passive NFC. See lecture 11 @ 18:47"
+    },
+    {
+      "q": "[Week 3] Bluetooth is based on .",
+      "options": [
+        "Nanonets",
+        "Binarynets",
+        "Both (a) and (b)",
+        "None of these"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "Bluetooth is based on Piconets. See lecture 12 @ 01:55"
+    },
+    {
+      "q": "[Week 3] A in NFC emits a small electric current which creates a magnetic field that in turn bridges the physical space between the devices.",
+      "options": [
+        "reader",
+        "writer",
+        "destroyer",
+        "None of these"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "A reader in NFC emits a small electric current which creates a magnetic field that in turn bridges the physical space between the devices See lecture 11 @ 20:31"
+    },
+    {
+      "q": "[Week 3] State true of false. Bluetooth technology is based on Ad-hoc network technology.",
+      "options": [
+        "False",
+        "True"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Bluetooth technology is based on Ad-hoc network technology. See lecture 12 @ 02:30"
+    },
+    {
+      "q": "[Week 3] State true or false. Zwave utilizes GFSK modulation and Hongkong channel encoding.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Zwave utilizes GFSK modulation and Manchester channel encoding. See lecture 13 @ 07:36"
+    },
+    {
+      "q": "[Week 3] The process of bypassing radio dead-spots is done using a message called ________ in Zwave.",
+      "options": [
+        "Ping",
+        "Healing",
+        "Frame",
+        "None of these"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "The process of bypassing radio dead-spots is done using a message called Healing in Zwave. See lecture 13 @ 11:34"
+    },
+    {
+      "q": "[Week 3] State whether the following statement is true or false. Statement: Sensor nodes have unlimited battery life.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Sensors nodes have limited battery life. See lecture 14 @ 13:15"
+    },
+    {
+      "q": "[Week 3] State whether the following statement is true or false. Statement: The Link Manager Protocol in Bluetooth manages the establishment, authentication, link configuration.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "The Link Manager Protocol in Bluetooth manages the establishment, authentication, link configuration. See Page number – 157, Chapter - 7, Book - Introduction to IoT, Authors – Sudip Misra, Anandarup Mukherjee, and Arijit Roy, Publisher – Cambridge University Press, Edition – 1 (2021)"
+    },
+    {
+      "q": "[Week 3] Zigbee commonly uses data rate.",
+      "options": [
+        "250 kbps",
+        "250 Mbps",
+        "260 kbps",
+        "260 Mbps"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "Zigbee commonly uses 250 kbps data rate. See Page number – 131, Chapter - 7, Book - Introduction to IoT, Authors – Sudip Misra, Anandarup Mukherjee, and Arijit Roy, Publisher – Cambridge University Press, Edition – 1 (2021) ************END***********"
+    }
+  ],
+  "4": [
+    {
+      "q": "[Week 4] State whether the following statement is true or false. Statement: Instead of a PIR sensor, a camera can also be used in the agricultural field to detect intruders.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "Instead of a PIR sensor, a camera can also be used in the agricultural field to detect intruders. See lecture 16 @ 13:21"
+    },
+    {
+      "q": "[Week 4] An ultrasonic sensor senses the at which the object is located.",
+      "options": [
+        "distance",
+        "coordinates",
+        "Both (a) and (b)",
+        "None of these"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "An ultrasonic sensor senses the distance at which the object is located. See lecture 16 @ 13:21"
+    },
+    {
+      "q": "[Week 4] WMSNs can be used for",
+      "options": [
+        "Security surveillance",
+        "Wild-habitat monitoring",
+        "Environmental monitoring",
+        "All of these"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "WMSNs can be used for a. Security surveillance b. Wild-habitat monitoring c. Environmental monitoring See lecture 16 @ 22:17"
+    },
+    {
+      "q": "[Week 4] State whether the following statement is true or false. Statement: Objective of coverage in WSN is to use minimum number of sensors and maximize network lifetime.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "The objective of coverage in WSN is to use minimum number of sensors and maximize the network lifetime. See lecture 17 @ 08:47"
+    },
+    {
+      "q": "[Week 4] What is the full form of AUV in the context of mobile wireless sensor networks?",
+      "options": [
+        "Aerial and Underwater Vehicle",
+        "Ambient and Underprivileged Vehicle",
+        "Astral Underwater Vehicle",
+        "None of these"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "The full form of AUV is Autonomous Underwater Vehicle. See lecture 18 @ 07:56"
+    },
+    {
+      "q": "[Week 4] State whether the following statement is true or false. In the localized coverage algorithm, special types of distributed algorithms are used where only one subset of nodes participates in sensing, communication, and computation.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "In the localized coverage algorithm, special types of distributed algorithms are used where only one subset of nodes participates in sensing, communication, and computation. See lecture 17 @ 10:37"
+    },
+    {
+      "q": "[Week 4] Which of the following is/are advantage/advantages of Stationary Wireless Sensor Networks?",
+      "options": [
+        "Easy deployment",
+        "Easy topology maintenance",
+        "Both (a) and (b)",
+        "None of these"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "The advantages of Stationary Wireless Sensor Networks are – a. Easy deployment b. Easy topology maintenance c. Node can be placed in an optimized distance See lecture 18 @ 01:12"
+    },
+    {
+      "q": "[Week 4] State true or false. In Human-centric Sensing, humanbeings can act as Sensor Operators?",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "In Human-centric Sensing, human beings can act as Sensor Operators. See lecture 18 @ 12:36"
+    },
+    {
+      "q": "[Week 4] Which of the following is not a property of MANET-infrastructure less network of mobile devices connected wirelessly?",
+      "options": [
+        "Self-CHOP",
+        "Self-HOP",
+        "Both (a) and (b)",
+        "None of these"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "MANET-infrastructure less network of mobile devices connected wirelessly which follow self-CHOP properties. Also, HOP is a subset of CHOP properties. Hence, both Self-CHOP and Self-HOP are properties of MANET-infrastructure less network of mobile devices connected wirelessly. See lecture 18 @ 04:28"
+    },
+    {
+      "q": "[Week 4] State whether the following statement is true or false. Statement: UAV networks provide a solution for deployments where there is a need for frequent change configurations.",
+      "options": [
+        "False",
+        "True"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "UAV networks provide a solution for deployments where there is a need for frequent change configurations. See lecture 19 @ 03:23"
+    },
+    {
+      "q": "[Week 4] Which of the following is NOT a feature of mesh topology in UAV system?",
+      "options": [
+        "Flexible",
+        "Reliable",
+        "None of these",
+        "Both (a) and (b)"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Features of mesh topology in UAV system are - Flexible Reliable See lecture 19 @ 12:53"
+    },
+    {
+      "q": "[Week 4] Which of the following is not a property of a FANET?",
+      "options": [
+        "Inter-plane communication",
+        "Intra-plane communication",
+        "Both (a) and (b)",
+        "None of these"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "Inter-plane and Intra-plane communication are properties of FANET. See lecture 19 @ 16:51"
+    },
+    {
+      "q": "[Week 4] State true or false. M2M networks are characterized by a few number of sensor nodes deployed over a large area.",
+      "options": [
+        "False",
+        "True",
+        "Can not be determined"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "M2M networks are characterized by a large number of sensor nodes. See lecture 20 @ 10:17"
+    },
+    {
+      "q": "[Week 4] What is the full form of M2SP in the context of Machine-to-Machine Communication?",
+      "options": [
+        "M2M Stateless Platform",
+        "M2M Session Packet",
+        "M2M Secure Packaging",
+        "None of these"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "M2SP stands for M2M Service Platform. See lecture 20 @ 16:31"
+    },
+    {
+      "q": "[Week 4] The provides integrated services based on device collected data-sets.",
+      "options": [
+        "M2M Application Platform",
+        "M2M Service Platform",
+        "M2M Hardware Platform",
+        "None of these"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "The M2M Application Platform provides integrated services based on device collected data-sets. See lecture 20 @ 18:00 ************END***********"
+    }
+  ],
+  "5": [
+    {
+      "q": "[Week 5] What does the term \"Interoperability\" refer to in the context of IoT?",
+      "options": [
+        "The ability of a system to operate without power",
+        "The ability of different systems/products to work together without restrictions",
+        "The ability to increase the speed of the internet",
+        "None of these"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Interoperability is a characteristic of a product or system whose interfaces are completely understood to work with other products or systems. (See lecture 21@ 05:40)"
+    },
+    {
+      "q": "[Week 5] In the collaborative concept (Cosine) theory for interoperability, an object is defined as a quadruple (A, B, C, D). What does 'C' represent?",
+      "options": [
+        "The natural language used",
+        "The internal identifier",
+        "The context of A",
+        "The definition of the object"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "In the Cosine quadruple (A, B, C, D), C represents the context of A. (See lecture 21 @ 21:16)"
+    },
+    {
+      "q": "[Week 5] Which of the following best describes the \"Syntactic Interoperability\" challenge?",
+      "options": [
+        "Devices having different physical shapes",
+        "Devices using different message formats and data structures",
+        "Devices located in different countries",
+        "Devices having different owners"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Syntactic interoperability concerns the message formats and data structures (e.g., XML syntax) used for device interaction. (See lecture 21@ 17:13)"
+    },
+    {
+      "q": "[Week 5] Which of the following is a primary reason for the popularity of Arduino in IoT implementations?",
+      "options": [
+        "It is highly expensive and exclusive",
+        "It is low resource-consuming and cheap",
+        "It requires high-power external cooling",
+        "It only supports digital signals"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Arduino devices are popular because they are cheap, low resource-consuming, and open-source. (See lecture: 22 @01:10)"
+    },
+    {
+      "q": "[Week 5] What is the clock speed of the Arduino Uno board?",
+      "options": [
+        "8 MHz",
+        "32 MHz",
+        "16 MHz",
+        "50 MHz"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "The Arduino Uno operates at a voltage of 5V with a clock speed of 16 MHz. (See lecture: 22@07:01)"
+    },
+    {
+      "q": "[Week 5] Which function is used to iteratively loop over instances in an Arduino sketch?",
+      "options": [
+        "setup()",
+        "main()",
+        "loop()",
+        "start()"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "The loop() function is used for iteratively looping over instances, while setup() is used for initial configurations. (See lecture: 22@12:48)"
+    },
+    {
+      "q": "[Week 5] In Arduino, what is the default starting index for an array?",
+      "options": [
+        "1",
+        "-1",
+        "0",
+        "10"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Similar to C/C++, the conventional starting index for arrays in Arduino is zero. (See lecture: 23@04:16)"
+    },
+    {
+      "q": "[Week 5] What does the delay(5000) command do in a traffic signal simulation?",
+      "options": [
+        "Resets the Arduino board",
+        "Introduces a delay of 5 seconds",
+        "Turns off all LEDs immediately",
+        "Skips the current execution loop"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "The delay function takes input in milliseconds; therefore, 5000 milliseconds equals a 5-second delay. (See lecture: 23@15:30)"
+    },
+    {
+      "q": "[Week 5] Which header file must be called to use mathematical functions like sin() or cos()?",
+      "options": [
+        "arduino.h",
+        "math.h",
+        "sensor.h",
+        "stdio.h"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "To apply math functions, the math.h header must be initially called. (See lecture: 23@08:18)"
+    },
+    {
+      "q": "[Week 5] The DHT22 sensor is used for measuring which physical quantities?",
+      "options": [
+        "Pressure and Altitude",
+        "Light and Sound",
+        "Humidity and Temperature",
+        "Motion and Direction"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "DHT stands for Digital Humidity and Temperature sensor. (See lecture: 24 @04:45)"
+    },
+    {
+      "q": "[Week 5] What is the recommended voltage range for the VCC pin of a DHT sensor to avoid damage?",
+      "options": [
+        "1V to 2V",
+        "3.3V to 5V",
+        "12V to 24V",
+        "0V to 1V"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "The supply should range from 3.3V to 5V; exceeding this may damage the sensor. (See lecture: 24 @05:57)"
+    },
+    {
+      "q": "[Week 5] When integrating a typical digital temperature and humidity sensor (like the DHT series) with an Arduino board, which Arduino pin connection is used to receive the sensor’s data?",
+      "options": [
+        "Ground (GND)",
+        "Signal/data pin",
+        "5 V power pin",
+        "Analog input AREF"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "In interfacing a digital temperature/humidity sensor with an Arduino, the signal/data pin is connected to a digital input pin on the Arduino — this pin carries the sensor’s output readings to the microcontroller for processing. (See lecture: 24 @03:22)"
+    },
+    {
+      "q": "[Week 5] Which of the following describes the primary function of an actuator?",
+      "options": [
+        "Converts motion to energy",
+        "Converts energy or signals into motion",
+        "Stores data",
+        "Connects to the internet"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Actuators are mechanical or electromechanical devices that convert energy or signals into motion. (See lecture 25 @ 02:04)"
+    },
+    {
+      "q": "[Week 5] When using the Servo library in Arduino, which function is used to specify the pin where the servo is connected?",
+      "options": [
+        "servo.connect()",
+        "servo.attach()",
+        "servo.pinMode()",
+        "servo.write()"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "The attach() function is used to define the pin number to which the servo motor is connected (e.g., myservo.attach(9)). (See lecture 25 @ 08:16)"
+    },
+    {
+      "q": "[Week 5] In the context of the Arduino Servo library, which of the following is the correct function to command the servo motor to rotate to a specific angle?",
+      "options": [
+        "servo.move(angle)",
+        "servo.rotate(angle)",
+        "servo.write(angle)",
+        "servo.turn(angle)"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "The write() function is used to control the position of the servo motor. It takes degree values (typically between 0 and 180) as an argument and rotates the motor to that specific angle. For example, servo.write(90) moves the servo to the 90-degree position. (See lecture 25 @9:57) ************END***********"
+    }
+  ]
+}

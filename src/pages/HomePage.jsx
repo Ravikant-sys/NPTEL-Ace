@@ -4,6 +4,7 @@ import { useTheme } from '../hooks/useTheme';
 import { useScoreHistory } from '../hooks/useScoreHistory';
 import cloudData from '../data/cloud.json';
 import blockchainData from '../data/blockchain.json';
+import iotData from '../data/iot.json';
 
 const COURSES = [
   {
@@ -19,6 +20,13 @@ const COURSES = [
     desc: 'Cryptography, Consensus & Cryptocurrency',
     icon: '⛓️',
     data: blockchainData,
+  },
+  {
+    id: 'iot',
+    name: 'Introduction to IoT',
+    desc: 'Sensors, Actuators, Wireless Networks & IoT Protocols',
+    icon: '📡',
+    data: iotData,
   },
 ];
 

@@ -4,7 +4,7 @@
 [![React](https://img.shields.io/badge/React-18.3-61dafb?style=for-the-badge&logo=react)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-5.4-646cff?style=for-the-badge&logo=vite)](https://vitejs.dev/)
 
-A **Duolingo-inspired React application** for NPTEL courses — practice Cloud Computing and Blockchain assignments with instant feedback, streak tracking, milestone celebrations, animated mascot videos, and a gamified learning experience.
+A **Duolingo-inspired React application** for NPTEL courses — practice Cloud Computing, Blockchain, and Internet of Things (IoT) assignments with instant feedback, streak tracking, milestone celebrations, animated mascot videos, and a gamified learning experience.
 
 <p align="center">
   <img src="public/logo.jpg" alt="NPTEL Ace Mascot" width="200" />
@@ -30,7 +30,7 @@ A **Duolingo-inspired React application** for NPTEL courses — practice Cloud C
 ### 🎨 Design & Architecture
 - **React + Vite Architecture**: Lightning-fast hot reloading, modular component hierarchy, and declarative state machine.
 - **Dark & Light Modes**: System-aware and manual theme switching with customized radial gradients.
-- **Course-Specific Theming**: Emerald Green theme for Cloud Computing and Cyber Cyan theme for Blockchain.
+- **Course-Specific Theming**: Indigo theme for Cloud Computing, Cyber Cyan theme for Blockchain, and Emerald Tech theme for IoT.
 - **Responsive Layout**: Designed mobile-first for touch screens, tablets, and desktop browsers.
 
 ---
@@ -42,7 +42,7 @@ A **Duolingo-inspired React application** for NPTEL courses — practice Cloud C
 | **Framework** | [React 18](https://react.dev/) + [Vite](https://vitejs.dev/) |
 | **Routing** | [React Router 6](https://reactrouter.com/) |
 | **Styling** | Vanilla CSS (CSS variables, keyframe animations, glassmorphism) |
-| **Data Format** | Modular JSON datasets (`cloud.json`, `blockchain.json`) |
+| **Data Format** | Modular JSON datasets (`cloud.json`, `blockchain.json`, `iot.json`) |
 | **Deployment** | [Render](https://render.com/) Static Site (`render.yaml`) |
 
 ---
