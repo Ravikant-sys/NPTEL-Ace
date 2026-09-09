@@ -1,10 +1,10 @@
-# 🐻 NPTEL Ace
+# 🐻 NPTEL Ace — A Multi-Course NPTEL Practice Platform
 
 [![Live Site](https://img.shields.io/badge/Live%20Site-nptel--cloud--mcq.onrender.com-58cc02?style=for-the-badge&logo=render)](https://nptel-cloud-mcq.onrender.com/)
 [![React](https://img.shields.io/badge/React-18.3-61dafb?style=for-the-badge&logo=react)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-5.4-646cff?style=for-the-badge&logo=vite)](https://vitejs.dev/)
 
-A **Duolingo-inspired React application** for NPTEL courses — practice Cloud Computing, Blockchain, and Internet of Things (IoT) assignments with instant feedback, streak tracking, milestone celebrations, animated mascot videos, and a gamified learning experience.
+A **Duolingo-inspired multi-course practice platform** for NPTEL courses — practice Cloud Computing, Blockchain, and Internet of Things (IoT) assignments with instant feedback, streak tracking, milestone celebrations, animated mascot videos, and a gamified learning experience.
 
 <p align="center">
   <img src="public/logo.jpg" alt="NPTEL Ace Mascot" width="200" />
@@ -90,7 +90,8 @@ nptel-cloud-mcq/
 │   │   └── AdminToast.jsx     # Easter egg analytics panel
 │   ├── data/
 │   │   ├── cloud.json         # 12 weeks of Cloud Computing MCQs
-│   │   └── blockchain.json    # 11 weeks of Blockchain MCQs
+│   │   ├── blockchain.json    # 11 weeks of Blockchain MCQs
+│   │   └── iot.json           # 5 weeks of Internet of Things MCQs
 │   ├── hooks/
 │   │   ├── useTheme.jsx       # Dark/Light & Course theme provider
 │   │   └── useScoreHistory.js # LocalStorage score storage
