@@ -98,13 +98,24 @@ body::before {
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    z-index: -1;
+    z-index: -2;
     background:
         radial-gradient(ellipse at 20% 50%, rgba(88, 204, 2, 0.06) 0%, transparent 50%),
         radial-gradient(ellipse at 80% 20%, rgba(88, 204, 2, 0.04) 0%, transparent 50%),
         radial-gradient(ellipse at 50% 80%, rgba(0, 180, 216, 0.04) 0%, transparent 50%);
     pointer-events: none;
     animation: bgPulse 10s ease-in-out infinite alternate;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.6s ease;
 }
 
 [data-theme="light"] body::before {
@@ -116,6 +127,11 @@ body::before {
 @keyframes bgPulse {
     0% { opacity: 0.6; }
     100% { opacity: 1; }
+}
+
+@keyframes floatPattern {
+    0% { background-position: 0 0; }
+    100% { background-position: 600px 400px; }
 }
 
 /* ── Header / Navbar ────────────────────────────────────────── */
@@ -302,6 +318,33 @@ body::before {
 
 .course-card:active {
     transform: translateY(-1px) scale(0.99);
+}
+
+#card-cloud:hover {
+    border-color: #38bdf8;
+    box-shadow: 0 8px 30px rgba(56, 189, 248, 0.28);
+}
+#card-cloud:hover::after {
+    border-color: #38bdf8;
+    background: #38bdf8;
+}
+
+#card-blockchain:hover {
+    border-color: #00d4ff;
+    box-shadow: 0 8px 30px rgba(0, 212, 255, 0.28);
+}
+#card-blockchain:hover::after {
+    border-color: #00d4ff;
+    background: #00d4ff;
+}
+
+#card-iot:hover {
+    border-color: #10b981;
+    box-shadow: 0 8px 30px rgba(16, 185, 129, 0.28);
+}
+#card-iot:hover::after {
+    border-color: #10b981;
+    background: #10b981;
 }
 
 .course-icon {
@@ -1237,61 +1280,186 @@ body::before {
     .header-logo { font-size: 1.2rem; }
 }
 
-/* ── Blockchain Theme Override ──────────────────────────────── */
+/* ── Cloud Computing Theme & Background ────────────────────── */
+html[data-course="cloud"] {
+    --bg-primary: #060e1d;
+    --bg-secondary: #0a172e;
+    --bg-card: #0e2040;
+    --bg-card-hover: #142a54;
+    --bg-option: #0e2040;
+    --bg-option-hover: #152f5c;
+    --bg-option-selected: #1a3a70;
+    --border-option: #1e3d73;
+    --border-option-selected: #38bdf8;
+    --border-option-hover: #2e6db5;
+    --accent: #38bdf8;
+    --accent-hover: #0284c7;
+    --accent-glow: rgba(56, 189, 248, 0.3);
+    --progress-fill: #38bdf8;
+    --check-btn-bg: #0284c7;
+    --check-btn-hover: #0369a1;
+    --feedback-correct-bg: #07263b;
+    --feedback-correct-border: #38bdf8;
+    --glass-border: rgba(56, 189, 248, 0.2);
+}
+
+html[data-course="cloud"] body::before {
+    background:
+        radial-gradient(ellipse at 15% 30%, rgba(56, 189, 248, 0.12) 0%, transparent 55%),
+        radial-gradient(ellipse at 85% 65%, rgba(99, 102, 241, 0.10) 0%, transparent 55%),
+        radial-gradient(ellipse at 50% 10%, rgba(14, 165, 233, 0.08) 0%, transparent 50%);
+}
+
+html[data-course="cloud"] body::after {
+    opacity: 0.35;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='100' viewBox='0 0 160 100'%3E%3Cpath d='M30,65 a18,18 0 0,1 28,-10 a26,26 0 0,1 46,6 a18,18 0 0,1 22,22 a14,14 0 0,1 -14,12 l-74,0 a14,14 0 0,1 -8,-30 z' fill='none' stroke='rgba(56,189,248,0.22)' stroke-width='1.5' stroke-dasharray='4,4'/%3E%3Ccircle cx='125' cy='28' r='2.5' fill='rgba(147,197,253,0.3)'/%3E%3Ccircle cx='38' cy='22' r='2' fill='rgba(56,189,248,0.25)'/%3E%3C/svg%3E");
+    background-size: 240px 150px;
+    animation: floatPattern 90s linear infinite;
+}
+
+[data-theme="light"][data-course="cloud"] {
+    --bg-primary: #f0f7ff;
+    --bg-secondary: #ffffff;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f3f9ff;
+    --border-option: #dbeafe;
+    --border-option-selected: #0284c7;
+    --border-option-hover: #93c5fd;
+    --accent: #0284c7;
+    --accent-hover: #0369a1;
+    --accent-glow: rgba(2, 132, 199, 0.2);
+    --progress-fill: #0284c7;
+    --check-btn-bg: #0284c7;
+    --check-btn-hover: #0369a1;
+    --feedback-correct-bg: #e0f2fe;
+    --feedback-correct-border: #0284c7;
+}
+
+[data-theme="light"][data-course="cloud"] body::before {
+    background:
+        radial-gradient(ellipse at 15% 30%, rgba(56, 189, 248, 0.12) 0%, transparent 55%),
+        radial-gradient(ellipse at 85% 65%, rgba(99, 102, 241, 0.08) 0%, transparent 55%);
+}
+
+/* ── Blockchain Theme & Background ──────────────────────────── */
 html[data-course="blockchain"] {
-    --bg-primary: #0a0e1a;
-    --bg-secondary: #0f1428;
-    --bg-card: #141a30;
-    --bg-card-hover: #1a2240;
-    --bg-option: #141a30;
-    --bg-option-hover: #1a2545;
-    --bg-option-selected: #1a2850;
-    --border-option: #252d50;
+    --bg-primary: #070b17;
+    --bg-secondary: #0c1224;
+    --bg-card: #111a33;
+    --bg-card-hover: #172447;
+    --bg-option: #111a33;
+    --bg-option-hover: #18274d;
+    --bg-option-selected: #1d3264;
+    --border-option: #223766;
     --border-option-selected: #00d4ff;
-    --border-option-hover: #3a5580;
+    --border-option-hover: #35609e;
     --accent: #00d4ff;
     --accent-hover: #00b8e0;
-    --accent-glow: rgba(0, 212, 255, 0.25);
+    --accent-glow: rgba(0, 212, 255, 0.3);
     --progress-fill: #00d4ff;
     --check-btn-bg: #00d4ff;
     --check-btn-hover: #00b8e0;
-    --feedback-correct-bg: #0a2530;
+    --feedback-correct-bg: #072533;
     --feedback-correct-border: #00d4ff;
-    --glass-border: rgba(0, 212, 255, 0.15);
+    --glass-border: rgba(0, 212, 255, 0.2);
 }
 
 html[data-course="blockchain"] body::before {
     background:
-        radial-gradient(ellipse at 20% 50%, rgba(0, 212, 255, 0.06) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 20%, rgba(0, 100, 255, 0.04) 0%, transparent 50%);
+        radial-gradient(ellipse at 25% 45%, rgba(0, 212, 255, 0.11) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 25%, rgba(139, 92, 246, 0.09) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 85%, rgba(0, 100, 255, 0.06) 0%, transparent 55%);
 }
 
-/* ── IoT (Internet of Things) Theme Override ────────────────── */
+html[data-course="blockchain"] body::after {
+    opacity: 0.35;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpolygon points='60,15 95,35 95,75 60,95 25,75 25,35' fill='none' stroke='rgba(0,212,255,0.22)' stroke-width='1.5'/%3E%3Cpolygon points='60,30 82,43 82,67 60,80 38,67 38,43' fill='none' stroke='rgba(0,212,255,0.1)' stroke-width='1'/%3E%3Cline x1='60' y1='15' x2='60' y2='0' stroke='rgba(0,212,255,0.16)' stroke-width='1.5' stroke-dasharray='3,3'/%3E%3Cline x1='95' y1='35' x2='120' y2='35' stroke='rgba(0,212,255,0.16)' stroke-width='1.5' stroke-dasharray='3,3'/%3E%3Cline x1='25' y1='35' x2='0' y2='35' stroke='rgba(0,212,255,0.16)' stroke-width='1.5' stroke-dasharray='3,3'/%3E%3Ccircle cx='60' cy='15' r='3' fill='rgba(0,212,255,0.5)'/%3E%3Ccircle cx='95' cy='35' r='3' fill='rgba(0,212,255,0.5)'/%3E%3Ccircle cx='25' cy='35' r='3' fill='rgba(0,212,255,0.5)'/%3E%3C/svg%3E");
+    background-size: 160px 160px;
+    animation: floatPattern 80s linear infinite;
+}
+
+[data-theme="light"][data-course="blockchain"] {
+    --bg-primary: #f0f7fa;
+    --bg-secondary: #ffffff;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f2f9fc;
+    --border-option: #d2e7f2;
+    --border-option-selected: #0099bb;
+    --border-option-hover: #77c8e0;
+    --accent: #0099bb;
+    --accent-hover: #0088a6;
+    --accent-glow: rgba(0, 153, 187, 0.2);
+    --progress-fill: #0099bb;
+    --check-btn-bg: #0099bb;
+    --check-btn-hover: #0088a6;
+    --feedback-correct-bg: #e2f6fc;
+    --feedback-correct-border: #0099bb;
+}
+
+[data-theme="light"][data-course="blockchain"] body::before {
+    background:
+        radial-gradient(ellipse at 25% 45%, rgba(0, 212, 255, 0.12) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 25%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+}
+
+/* ── IoT (Internet of Things) Theme & Background ────────────── */
 html[data-course="iot"] {
-    --bg-primary: #071510;
-    --bg-secondary: #0c2019;
-    --bg-card: #112a21;
-    --bg-card-hover: #17372c;
-    --bg-option: #112a21;
-    --bg-option-hover: #183c2f;
-    --bg-option-selected: #1a4939;
-    --border-option: #1e4d3b;
+    --bg-primary: #05130e;
+    --bg-secondary: #091d16;
+    --bg-card: #0e2b20;
+    --bg-card-hover: #143a2b;
+    --bg-option: #0e2b20;
+    --bg-option-hover: #164030;
+    --bg-option-selected: #1a523e;
+    --border-option: #1f5742;
     --border-option-selected: #10b981;
     --border-option-hover: #2ba278;
     --accent: #10b981;
     --accent-hover: #059669;
-    --accent-glow: rgba(16, 185, 129, 0.28);
+    --accent-glow: rgba(16, 185, 129, 0.3);
     --progress-fill: #10b981;
     --check-btn-bg: #10b981;
     --check-btn-hover: #059669;
-    --feedback-correct-bg: #0b3323;
+    --feedback-correct-bg: #072e20;
     --feedback-correct-border: #10b981;
-    --glass-border: rgba(16, 185, 129, 0.18);
+    --glass-border: rgba(16, 185, 129, 0.2);
 }
 
 html[data-course="iot"] body::before {
     background:
-        radial-gradient(ellipse at 20% 50%, rgba(16, 185, 129, 0.08) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 20%, rgba(6, 182, 212, 0.05) 0%, transparent 50%);
+        radial-gradient(ellipse at 20% 50%, rgba(16, 185, 129, 0.12) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 20%, rgba(6, 182, 212, 0.10) 0%, transparent 55%),
+        radial-gradient(ellipse at 50% 85%, rgba(16, 185, 129, 0.06) 0%, transparent 50%);
+}
+
+html[data-course="iot"] body::after {
+    opacity: 0.35;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cpath d='M20,20 h40 v40 h-40 z' fill='none' stroke='rgba(16,185,129,0.22)' stroke-width='1.5'/%3E%3Cpath d='M60,40 h30 v30' fill='none' stroke='rgba(16,185,129,0.18)' stroke-width='1.2' stroke-dasharray='3,3'/%3E%3Ccircle cx='90' cy='70' r='3.5' fill='rgba(16,185,129,0.5)'/%3E%3Cpath d='M90,70 m10,-10 a14,14 0 0,1 0,20' fill='none' stroke='rgba(6,182,212,0.35)' stroke-width='1.5'/%3E%3Cpath d='M90,70 m18,-18 a25,25 0 0,1 0,36' fill='none' stroke='rgba(6,182,212,0.22)' stroke-width='1.5'/%3E%3Cpath d='M90,70 m26,-26 a36,36 0 0,1 0,52' fill='none' stroke='rgba(6,182,212,0.15)' stroke-width='1.2'/%3E%3Ccircle cx='40' cy='40' r='4' fill='rgba(16,185,129,0.35)'/%3E%3C/svg%3E");
+    background-size: 180px 180px;
+    animation: floatPattern 100s linear infinite;
+}
+
+[data-theme="light"][data-course="iot"] {
+    --bg-primary: #f0faf5;
+    --bg-secondary: #ffffff;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f2fcf7;
+    --border-option: #d1fae5;
+    --border-option-selected: #059669;
+    --border-option-hover: #6ee7b7;
+    --accent: #059669;
+    --accent-hover: #047857;
+    --accent-glow: rgba(5, 150, 105, 0.2);
+    --progress-fill: #059669;
+    --check-btn-bg: #059669;
+    --check-btn-hover: #047857;
+    --feedback-correct-bg: #e6f9f0;
+    --feedback-correct-border: #059669;
+}
+
+[data-theme="light"][data-course="iot"] body::before {
+    background:
+        radial-gradient(ellipse at 20% 50%, rgba(16, 185, 129, 0.12) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 20%, rgba(6, 182, 212, 0.08) 0%, transparent 55%);
 }
 
