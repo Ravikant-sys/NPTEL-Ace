@@ -9,11 +9,13 @@ import CelebrationVideo from '../components/CelebrationVideo';
 import cloudData from '../data/cloud.json';
 import blockchainData from '../data/blockchain.json';
 import iotData from '../data/iot.json';
+import entrepreneurshipData from '../data/entrepreneurship.json';
 
 const DATA_MAP = {
   cloud: cloudData,
   blockchain: blockchainData,
   iot: iotData,
+  entrepreneurship: entrepreneurshipData,
 };
 
 export default function QuizPage() {

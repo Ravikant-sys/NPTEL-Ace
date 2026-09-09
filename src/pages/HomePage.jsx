@@ -5,6 +5,7 @@ import { useScoreHistory } from '../hooks/useScoreHistory';
 import cloudData from '../data/cloud.json';
 import blockchainData from '../data/blockchain.json';
 import iotData from '../data/iot.json';
+import entrepreneurshipData from '../data/entrepreneurship.json';
 
 const COURSES = [
   {
@@ -27,6 +28,13 @@ const COURSES = [
     desc: 'Sensors, Actuators, Wireless Networks & IoT Protocols',
     icon: '📡',
     data: iotData,
+  },
+  {
+    id: 'entrepreneurship',
+    name: 'Entrepreneurship',
+    desc: 'Ideation, Prototyping, Disruption & Business Strategies',
+    icon: '🚀',
+    data: entrepreneurshipData,
   },
 ];
 

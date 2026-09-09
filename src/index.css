@@ -347,6 +347,15 @@ body::after {
     background: #10b981;
 }
 
+#card-entrepreneurship:hover {
+    border-color: #f59e0b;
+    box-shadow: 0 8px 30px rgba(245, 158, 11, 0.28);
+}
+#card-entrepreneurship:hover::after {
+    border-color: #f59e0b;
+    background: #f59e0b;
+}
+
 .course-icon {
     font-size: 2.8rem;
     flex-shrink: 0;
@@ -1462,4 +1471,66 @@ html[data-course="iot"] body::after {
         radial-gradient(ellipse at 20% 50%, rgba(16, 185, 129, 0.12) 0%, transparent 55%),
         radial-gradient(ellipse at 80% 20%, rgba(6, 182, 212, 0.08) 0%, transparent 55%);
 }
+
+/* ── Entrepreneurship Theme & Background ────────────────────── */
+html[data-course="entrepreneurship"] {
+    --bg-primary: #110d05;
+    --bg-secondary: #181308;
+    --bg-card: #221b0b;
+    --bg-card-hover: #2d230f;
+    --bg-option: #221b0b;
+    --bg-option-hover: #332711;
+    --bg-option-selected: #443315;
+    --border-option: #3d2f14;
+    --border-option-selected: #f59e0b;
+    --border-option-hover: #b47a16;
+    --accent: #f59e0b;
+    --accent-hover: #d97706;
+    --accent-glow: rgba(245, 158, 11, 0.3);
+    --progress-fill: #f59e0b;
+    --check-btn-bg: #d97706;
+    --check-btn-hover: #b45309;
+    --feedback-correct-bg: #2d1f06;
+    --feedback-correct-border: #f59e0b;
+    --glass-border: rgba(245, 158, 11, 0.2);
+}
+
+html[data-course="entrepreneurship"] body::before {
+    background:
+        radial-gradient(ellipse at 20% 45%, rgba(245, 158, 11, 0.12) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 20%, rgba(239, 68, 68, 0.08) 0%, transparent 55%),
+        radial-gradient(ellipse at 50% 85%, rgba(251, 191, 36, 0.06) 0%, transparent 50%);
+}
+
+html[data-course="entrepreneurship"] body::after {
+    opacity: 0.35;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Cpath d='M25,120 L75,35 L125,120 Z' fill='none' stroke='rgba(245,158,11,0.20)' stroke-width='1.5' stroke-dasharray='4,4'/%3E%3Ccircle cx='75' cy='35' r='4' fill='rgba(245,158,11,0.5)'/%3E%3Cpath d='M75,35 L115,15' fill='none' stroke='rgba(251,191,36,0.35)' stroke-width='1.5'/%3E%3Cpolygon points='115,15 105,18 112,25' fill='rgba(251,191,36,0.45)'/%3E%3Ccircle cx='25' cy='120' r='3' fill='rgba(245,158,11,0.35)'/%3E%3Ccircle cx='125' cy='120' r='3' fill='rgba(245,158,11,0.35)'/%3E%3Cpath d='M40,85 Q75,65 110,85' fill='none' stroke='rgba(245,158,11,0.15)' stroke-width='1.2'/%3E%3C/svg%3E");
+    background-size: 180px 180px;
+    animation: floatPattern 95s linear infinite;
+}
+
+[data-theme="light"][data-course="entrepreneurship"] {
+    --bg-primary: #fffdf5;
+    --bg-secondary: #ffffff;
+    --bg-card: #ffffff;
+    --bg-card-hover: #fefcf0;
+    --border-option: #fef3c7;
+    --border-option-selected: #d97706;
+    --border-option-hover: #fcd34d;
+    --accent: #d97706;
+    --accent-hover: #b45309;
+    --accent-glow: rgba(217, 119, 6, 0.2);
+    --progress-fill: #d97706;
+    --check-btn-bg: #d97706;
+    --check-btn-hover: #b45309;
+    --feedback-correct-bg: #fef9c3;
+    --feedback-correct-border: #d97706;
+}
+
+[data-theme="light"][data-course="entrepreneurship"] body::before {
+    background:
+        radial-gradient(ellipse at 20% 45%, rgba(245, 158, 11, 0.12) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 20%, rgba(239, 68, 68, 0.06) 0%, transparent 55%);
+}
+
 

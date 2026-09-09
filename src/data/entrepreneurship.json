@@ -1,0 +1,734 @@
+{
+  "1": [
+    {
+      "q": "[Week 1] Most successful new-age start-ups in India deploy the following:",
+      "options": [
+        "Imported technologies.",
+        "Vintage technologies.",
+        "Social technologies.",
+        "Digital technologies."
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "Successful modern Indian start-ups (fintech, e-commerce, aggregators) heavily leverage digital technologies, mobile platforms, and India Stack."
+    },
+    {
+      "q": "[Week 1] Government of India has the following qualification criterion for an entity to be called as ‘startup’ in India, reckoned from the date of inception.",
+      "options": [
+        "Age of the start-up",
+        "Age of the founders",
+        "Age of the investors",
+        "None of the above"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "Under DPIIT notification, an entity is recognized as a startup up to 10 years from its date of incorporation/registration."
+    },
+    {
+      "q": "[Week 1] An entrepreneur who enters the market with a product or service which is based on a similar or improved product that is already existing is called:",
+      "options": [
+        "Innovative entrepreneur",
+        "Replicative entrepreneur",
+        "Opportunity entrepreneur",
+        "Necessity entrepreneur"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Replicative (or imitative) entrepreneurs enter established markets with identical or incremental improvements to existing products/services."
+    },
+    {
+      "q": "[Week 1] Most start-ups when established fall under the following industry classification:",
+      "options": [
+        "Mega",
+        "MSME",
+        "PLI",
+        "Mainstream"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Start-ups generally start small and initially qualify as Micro, Small and Medium Enterprises (MSMEs)."
+    },
+    {
+      "q": "[Week 1] Dedicated incubation infrastructure that supports a start-up in the early stage of the startup life cycle is found in an Institution such as:",
+      "options": [
+        "IIT Madras Research Park",
+        "Genome Valley",
+        "CSIR",
+        "DRDO"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "IIT Madras Research Park houses premier university-backed incubation cells supporting early-stage deeptech and commercial startups."
+    },
+    {
+      "q": "[Week 1] Which of these startups witnessed rapid growth in the Covid-19 pandemic times?",
+      "options": [
+        "Food Delivery",
+        "E-Commerce",
+        "Edutech",
+        "All the above"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "Lockdowns and social distancing accelerated digital adoption across edutech, e-commerce, and contactless food delivery."
+    },
+    {
+      "q": "[Week 1] Which of the following is an example of industry undergoing product transformation?",
+      "options": [
+        "Highway construction",
+        "Automobile industry",
+        "Rail transport",
+        "Air transport"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "The automotive industry is undergoing massive product transformation towards electric powertrains (EVs), connected software, and autonomous driving."
+    },
+    {
+      "q": "[Week 1] Which of the following represents a transformative convergence of finance and digital technologies, which is yet to see endorsement by the national government as legal tenor?",
+      "options": [
+        "Microfinance",
+        "Credit Cards",
+        "Payment gateways",
+        "Cryptocurrency"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "Cryptocurrencies represent decentralized digital finance but are not recognized as legal tender by the Government of India."
+    },
+    {
+      "q": "[Week 1] To achieve customer acceptance, the entrepreneur must:",
+      "options": [
+        "Identify the problem faced in the marketplace and find a creative solution.",
+        "Identify the problem faced in financing for the project and raise finance",
+        "Identify ideas that qualify for government support and implement them",
+        "Identify good talent and build an organisation"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "Product-market fit and customer adoption stem fundamentally from identifying genuine market pain points and offering creative, viable solutions."
+    },
+    {
+      "q": "[Week 1] What is the fundamental starting stage of an",
+      "options": [
+        "",
+        "Testing",
+        "Validation",
+        "Prototyping"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "Every entrepreneurial venture originates with ideation—discovering opportunities and conceptualizing the initial business idea."
+    }
+  ],
+  "2": [
+    {
+      "q": "[Week 2] Which stage comes immediately after",
+      "options": [
+        "Testing",
+        "Validation",
+        "Prototyping",
+        ""
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Product development sequentially flows through Ideation -> Prototyping -> Testing -> Validation -> Commercialisation."
+    },
+    {
+      "q": "[Week 2] In MBTI personality typology, ENTJ is the:",
+      "options": [
+        "Rarest personality type that makes for highly effective leaders and CEOs",
+        "Most commonly found personality type that makes for submissive officers",
+        "Unique descriptor for product designers",
+        "Indicator for rule-book bound CFOs and lawyers"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "ENTJ (Extraverted, Intuitive, Thinking, Judging), known as the \"Commander\", is characterized by decisive strategic leadership, often found in effective CEOs."
+    },
+    {
+      "q": "[Week 2] Kerr, S.P., W.R. Kerr & T. Xu in their paper, “Personality Traits of Entrepreneurs: A review of Recent Literature”, HBS Working Paper 18-047, November 2017 held that part of:",
+      "options": [
+        "Individual training",
+        "National culture",
+        "Industrial development",
+        "Global economy"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Kerr et al. (HBS 2017) discuss how entrepreneurial personality traits, risk attitudes, and locus of control are influenced by and embedded within national cultural environments."
+    },
+    {
+      "q": "[Week 2] ",
+      "options": [
+        "Self-delusion",
+        "Conglomerates",
+        "Excessive competition",
+        "None of the above"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Entrepreneurial large firms grow and diversify into multi-business conglomerates by identifying adjacent market opportunities."
+    },
+    {
+      "q": "[Week 2] Compared with conventional entrepreneurs, start-up founders take additional risks primarily by:",
+      "options": [
+        "Experimenting with innovation and new business models",
+        "Experimenting with employees",
+        "Experimenting with public policy",
+        "Experimenting with customers"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "Unlike conventional businesses that use established business models, start-ups take radical risks with unproven technologies and innovative business models."
+    },
+    {
+      "q": "[Week 2] The success of many start-ups such as RedBus, Swiggy, Airbnb, Uber and make my trip was based on:",
+      "options": [
+        "Treating demand and supply separately",
+        "Focussing only on demand",
+        "Focussing only on supply",
+        "Aggregating and linking demand and supply digitally"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "Two-sided digital platforms succeed through digital aggregation and frictionless matching of fragmented demand and distributed supply."
+    },
+    {
+      "q": "[Week 2] Paperboat is an Indian startup that succeeded with a thematic grid that combined:",
+      "options": [
+        "Ethnic Indian beverages with Ethnic Indian packaging",
+        "Global beverages with Ethnic Indian packaging",
+        "Ethnic Indian beverages with Contemporary modern packaging",
+        "Global beverages with Global packaging"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Hector Beverages' Paperboat paired traditional Indian nostalgic drinks (Aam Panna, Jaljeera) with sleek, modern stand-up flexible pouch packaging."
+    },
+    {
+      "q": "[Week 2] The fundamental and the first step of design thinking is:",
+      "options": [
+        "Designing a product or service",
+        "Empathising with the customer",
+        "Prototyping",
+        "Developing a market plan"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "The Stanford d.school design thinking framework begins with \"Empathize\"—deeply understanding customer needs and behaviors."
+    },
+    {
+      "q": "[Week 2] A true design thinking and",
+      "options": [
+        "Accepting the status quo",
+        "Questioning the basics",
+        "Relying on experts",
+        "None of the above"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Breakthrough innovation requires first-principles thinking and questioning fundamental assumptions."
+    },
+    {
+      "q": "[Week 2] Which of the following is a serious",
+      "options": [
+        "Lack of boundary",
+        "Lack of predefined purpose",
+        "Bias and closed-mindedness",
+        "Imaginary constraints"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Cognitive biases, preconceived notions, and closed-mindedness choke creativity and eliminate novel ideas prematurely."
+    }
+  ],
+  "3": [
+    {
+      "q": "[Week 3] An effective",
+      "options": [
+        "A computer analyst",
+        "An empathetic and creative thinker",
+        "A time conscious manager",
+        "A seasoned administrator"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Effective facilitation requires fostering creativity, open dialogue, and empathy to draw out diverse innovative ideas."
+    },
+    {
+      "q": "[Week 3] What is a native prototype?",
+      "options": [
+        "An improved product that is a hybrid of new and existing innards",
+        "A novel product developed on a zero-base approach",
+        "A product that reflects ethic nativity",
+        "A complete clone of an existing product"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "A native prototype is built from scratch on a zero-base approach without legacy constraints, contrasting with a retrofitted or adapted prototype."
+    },
+    {
+      "q": "[Week 3] Which of the following is not a Smart Wearable?",
+      "options": [
+        "Smart watch",
+        "Smart glass",
+        "Smart treadmill",
+        "Smart shoe"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "A treadmill is stationary fitness equipment, not a wearable device worn on the human body."
+    },
+    {
+      "q": "[Week 3] An integrated model of prototype development requires:",
+      "options": [
+        "Sequential design and manufacture",
+        "Diversified design and manufacture",
+        "Concurrent design and manufacture",
+        "Completely in-house manufacture."
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Concurrent engineering enables cross-functional teams to design, test, and plan manufacturing simultaneously, speeding up development cycles."
+    },
+    {
+      "q": "[Week 3] Under the World Trade Organization’s TRIPS Agreement, patent protection should be available and respected across:",
+      "options": [
+        "Only the state granting the patent",
+        "All signatory states",
+        "Signatory as well as non-signatory states",
+        "Neither signatory nor non-signatory states"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "TRIPS establishes minimum standards of intellectual property protection applicable across all WTO member nations."
+    },
+    {
+      "q": "[Week 3] Which patent of Amazon granted in 1999 enabled the company dominate online book retailing?",
+      "options": [
+        "“One-click” online purchase system",
+        "“One-click“ offline purchase system",
+        "“One-click” page search system",
+        "None of the above"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "Amazon's 1-Click patent (US Patent 5,960,411) allowed customers to make purchases with a single click using pre-saved payment credentials."
+    },
+    {
+      "q": "[Week 3] For the performance testing of a prototype to happen, which of the following is not required as much as the others?",
+      "options": [
+        "Product specifications",
+        "Testing methods",
+        "Testing equipment",
+        "External look and feel of the product"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "Performance testing evaluates core functional engineering metrics against technical specifications, rather than aesthetic external styling."
+    },
+    {
+      "q": "[Week 3] Which of the following is a variable experience product?",
+      "options": [
+        "Smart phone",
+        "Viewing movies from a movie library",
+        "Drinking water from a purifier",
+        "A luxury fashion accessory"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Each movie viewing provides a distinctly different narrative and emotional experience, making entertainment content a variable experience product."
+    },
+    {
+      "q": "[Week 3] The Minimum Viable Product (MVP) version of a smart watch, beyond its timekeeping function, must be:",
+      "options": [
+        "Its colour scheme",
+        "Its strap",
+        "Its dial face",
+        "Its health parameter tracking"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "A smart watch's core value proposition over a conventional watch is tracking health and physiological biometric parameters (heart rate, steps, SpO2)."
+    },
+    {
+      "q": "[Week 3] Field testing of a product should be based on:",
+      "options": [
+        "Repeat of lab testing",
+        "Simulated operating conditions",
+        "Destruction testing",
+        "Lifelong testing"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Field testing validates behavior and reliability under realistic user environments and simulated operational duty cycles."
+    }
+  ],
+  "4": [
+    {
+      "q": "[Week 4] Computer software gets typically commercialised as:",
+      "options": [
+        "Only B2B",
+        "Only B2C",
+        "Both B2B and B2C",
+        "None of the above"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Software is distributed both to enterprises (B2B SaaS, CRM, ERP) and individual consumers (B2C apps, streaming, personal software)."
+    },
+    {
+      "q": "[Week 4] Start-ups become unicorns with their focus on:",
+      "options": [
+        "Stable profits even at low scale",
+        "Rapid revenue growth and high market share",
+        "High pricing",
+        "None of the above"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Unicorn valuation is driven by exponential user adoption, rapid top-line growth, and capturing dominant market share."
+    },
+    {
+      "q": "[Week 4] Successful",
+      "options": [
+        "Demand creation",
+        "Demand fulfillment",
+        "Customer loyalty",
+        "All of the above"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "Full commercial success requires generating demand, fulfilling orders reliably through operations, and retaining customers over time."
+    },
+    {
+      "q": "[Week 4] A disruptive innovation is a potent combination of:",
+      "options": [
+        "High technology and Low cost",
+        "Creative business model and High technology",
+        "Creative business model and low cost",
+        "High"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "Classical disruptive innovation pairs accessible, improving technology and cost efficiency with a novel business architecture."
+    },
+    {
+      "q": "[Week 4] In the personal computer industry, disruption was hastened by:",
+      "options": [
+        "Look and feel of the computers",
+        "Computer languages",
+        "Exponential increase in processing power of the chips",
+        "Input-Output media"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Moore’s Law enabled microprocessors to continually double in speed while halving in cost, displacing minicomputers and mainframes."
+    },
+    {
+      "q": "[Week 4] Many of the Indian unicorns are based on:",
+      "options": [
+        "Contract manufacture",
+        "Contract research",
+        "Digital business models",
+        "Franchising overseas rights"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "The vast majority of Indian unicorns (Flipkart, Paytm, Zomato, Swiggy, Ola) are built on digital platform business models."
+    },
+    {
+      "q": "[Week 4] What is not common between Amazon.com and Flipkart?",
+      "options": [
+        "Both started with online book selling in the respective starting jurisdictions",
+        "Both are now in India as private companies",
+        "Both now cater to e-commerce in India",
+        "None of the above"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Amazon is an American publicly traded multinational corporation (NASDAQ: AMZN), unlike Flipkart which operates as a private company acquired by Walmart."
+    },
+    {
+      "q": "[Week 4] Because of Covid-19 pandemic, start-ups in the following industry were adversely affected:",
+      "options": [
+        "E-Commerce",
+        "Travel and hospitality",
+        "Medtech",
+        "Food delivery"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Mobility bans and airport closures devastated travel, hotels, and airline ticket booking startups."
+    },
+    {
+      "q": "[Week 4] Ninjacart is a successful start-up that addressed the following creatively and comprehensively:",
+      "options": [
+        "E-Commerce",
+        "Farm produce supply chain",
+        "Gaming",
+        "Food delivery"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Ninjacart restructured the agricultural supply chain by directly connecting farmers to kirana stores and supermarkets in under 12 hours."
+    },
+    {
+      "q": "[Week 4] In the granulated stages of manufactured product meets the required standards before reaching the distribution network?10",
+      "options": [
+        "Supply Chain",
+        "Quality Check",
+        "Sales and Collections",
+        "Service and Customer Support"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Quality control and assurance checkpoints verify specifications and tolerances before products are packaged into distribution channels."
+    }
+  ],
+  "5": [
+    {
+      "q": "[Week 5] Which type of innovation do start-ups primarily focus on?",
+      "options": [
+        "Evolutionary Innovation",
+        "Sustainable Innovation",
+        "Disruptive Innovation",
+        "Incremental Innovation"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Startups compete against established incumbents by targeting unserved segments or creating new markets through disruptive innovation."
+    },
+    {
+      "q": "[Week 5] “Every company that has tried to manage mainstream and disruptive businesses within a single organization failed.” This quote is from an article in HBR authored by:",
+      "options": [
+        "Eric Ries",
+        "Joseph L Bower and Clayton M Christensen",
+        "Michael Porter",
+        "Peter Drucker"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Published in their landmark 1995 Harvard Business Review paper \"Disruptive Technologies: Catching the Wave\"."
+    },
+    {
+      "q": "[Week 5] A defining acquisition of Google that took the company to leadership in mobile telephone industry was:",
+      "options": [
+        "YouTube",
+        "Android",
+        "Instagram",
+        "Nest"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Google acquired Android Inc. in 2005, which became the world's most widely used mobile operating system."
+    },
+    {
+      "q": "[Week 5] The pace of technology development in modern times is characterised as:",
+      "options": [
+        "Linear",
+        "Progressive",
+        "Non-linear",
+        "Progressive"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Contemporary technology evolution is non-linear and exponential, driven by combinational developments in computing and AI."
+    },
+    {
+      "q": "[Week 5] Just as chips revolutionised computing in the past (and will continue to), in future one of the following will revolutionise a whole spectrum of industries.",
+      "options": [
+        "Radars",
+        "Lidars",
+        "Motors",
+        "Smart Sensors"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "Ubiquitous smart sensors power automation, IoT, healthcare diagnostics, and autonomous cyber-physical systems."
+    },
+    {
+      "q": "[Week 5] In the Pioneering Leadership Model, which form of leadership is positioned at the top?",
+      "options": [
+        "Cost Leadership",
+        "Differentiation Leadership",
+        "Innovation Leadership",
+        "Pioneering Advantage"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Dr. Rao's hierarchy places Innovation Leadership at the pinnacle above cost and differentiation strategies."
+    },
+    {
+      "q": "[Week 5] Within the five technology forces, the power of operating systems is illustrated strikingly by the:",
+      "options": [
+        "Mobile phone industry",
+        "Renewable energy industry",
+        "Textile industry",
+        "Mining industry"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "Android and Apple iOS control virtually 100% of global smartphone software ecosystems."
+    },
+    {
+      "q": "[Week 5] For outstanding product or service success, a company should have:",
+      "options": [
+        "Individual skills",
+        "Departmental skills",
+        "Alchemy of skills",
+        "Assembly of skills"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Dr. C.B. Rao highlights that extraordinary breakthroughs require an \"alchemy of skills\"—blending engineering, design, and commercial acumen."
+    },
+    {
+      "q": "[Week 5] Which innovator strategy focuses on using new technologies to make aspirational ideas a reality?",
+      "options": [
+        "Experience Leadership",
+        "Experimental Leadership",
+        "Application Leadership",
+        "Cost Leadership"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Experimental leadership pursues boundary-pushing technology trials to convert visionary concepts into functioning reality."
+    },
+    {
+      "q": "[Week 5] Fourth industrial revolution is characterized by:",
+      "options": [
+        "Division of labour",
+        "Electricity",
+        "Cyber-physical-biological systems",
+        "Mass production"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Industry 4.0 fuses physical, digital, and biological domains through AI, robotics, IoT, and cloud networks."
+    }
+  ],
+  "6": [
+    {
+      "q": "[Week 6] Completely autonomous vehicle is an example of",
+      "options": [
+        "Inadequate perfection",
+        "Inadequate innovation",
+        "Imperfect innovation",
+        "Perfect innovation"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "Full Level-5 autonomous driving represents the pinnacle of autonomous mobility, termed \"perfect innovation\" in Dr. Rao's matrix."
+    },
+    {
+      "q": "[Week 6] Which industry in India has several hundreds of brands for the same generic product?",
+      "options": [
+        "Cycle industry",
+        "Automobile industry",
+        "Pharmaceutical industry",
+        "None of the above"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "India's branded generic drug market features hundreds of commercial brands for common generic formulations (e.g., paracetamol, pantoprazole)."
+    },
+    {
+      "q": "[Week 6] Which of the following statements is relatively true?",
+      "options": [
+        "Design is only an integrator of different functionalities into one product",
+        "Design is only a tool to promote different products with different functionalities",
+        "Design can integrate as well as different functionalities in one or more products",
+        "None of the above"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Product design serves a dual purpose: integrating complex subsystem functions while visually and ergonomically differentiating the offering."
+    },
+    {
+      "q": "[Week 6] Which of the following statements is true because of automobile electrification and autonomous driving?",
+      "options": [
+        "There would be opportunities for several technology led startups in the new generation components",
+        "Automobile electrification and autonomy are hyped up and offer little opportunity to start-ups",
+        "New generation components can be easily done in the facilities of existing auto component makers",
+        "All of the above"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "EV powertrains, BMS (battery management), sensors, and autonomy software open massive frontiers for new technology startups."
+    },
+    {
+      "q": "[Week 6] What can additive manufacturing do to the automobile industry?",
+      "options": [
+        "Add weight to components",
+        "Make components with just the required amount of materials",
+        "Improve look and feel",
+        "None of the above"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Additive manufacturing (3D printing) constructs geometry additively, drastically reducing material waste and enabling topology-optimized lightweighting."
+    },
+    {
+      "q": "[Week 6] From mobile phones, the recovery of which of the following critical materials presents a",
+      "options": [
+        "Steel",
+        "Aluminium",
+        "Cobalt",
+        "Plastic"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Cobalt is a scarce, high-value battery cathode element whose extraction from recycled e-waste represents a critical tech-led startup domain."
+    },
+    {
+      "q": "[Week 6] Speech recognition and NLP qualifies as",
+      "options": [
+        "Virtual reality",
+        "Artificial reality",
+        "Artificial intelligence",
+        "Mixed reality"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Natural Language Processing (NLP) and speech recognition are foundational disciplines of Artificial Intelligence (AI)."
+    },
+    {
+      "q": "[Week 6] According to the Five Economic Forces Model, strategy and structure should consider which forces as more primal than industrial forces?",
+      "options": [
+        "",
+        "Social forces",
+        "Economic forces",
+        "Competitive forces"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Macro-economic forces and economic value creation underpin and shape competitive industry dynamics."
+    },
+    {
+      "q": "[Week 6] Modern products such as Toyota car and Apple iPhone are manufactured through:",
+      "options": [
+        "Individual country fully integrated production",
+        "Globally networked production",
+        "Only Chinese manufacture",
+        "None of the above"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Modern complex devices rely on distributed global supply chains spanning chip fabrication, specialized components, and multi-country assembly."
+    },
+    {
+      "q": "[Week 6] Just-in-time inventory system is aligned with",
+      "options": [
+        "Push-type demand system",
+        "Pull-type demand system",
+        "Econometric demand system",
+        "Expert demand system"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "JIT operates as a pull-system (Kanban) where production is triggered strictly by downstream customer consumption."
+    }
+  ]
+}
