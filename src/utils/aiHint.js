@@ -1,4 +1,7 @@
-const OPENROUTER_API_KEY = import.meta.env.VITE_OPENROUTER_API_KEY;
+function getApiKey() {
+  return localStorage.getItem('openrouter_api_key') || import.meta.env.VITE_OPENROUTER_API_KEY || '';
+}
+
 const OPENROUTER_URL = 'https://openrouter.ai/api/v1/chat/completions';
 const MODEL = 'google/gemini-2.0-flash-001';
 
@@ -11,6 +14,10 @@ const MODEL = 'google/gemini-2.0-flash-001';
  * @returns {Promise<string>} - AI-generated explanation
  */
 export async function fetchAiHint({ question, options, correctIndices, solution }) {
+  const apiKey = getApiKey();
+  if (!apiKey) {
+    throw new Error('OpenRouter API key not configured. Add your key in Settings or localStorage.');
+  }
   const correctAnswers = correctIndices.map(i => `${String.fromCharCode(65 + i)}. ${options[i]}`).join(', ');
 
   const prompt = `You are an expert NPTEL tutor. A student is practicing MCQs and needs a concise, clear explanation.
@@ -28,7 +35,7 @@ Provide a SHORT (3–5 sentences), student-friendly explanation of WHY the corre
   const response = await fetch(OPENROUTER_URL, {
     method: 'POST',
     headers: {
-      'Authorization': `Bearer ${OPENROUTER_API_KEY}`,
+      'Authorization': `Bearer ${apiKey}`,
       'Content-Type': 'application/json',
       'HTTP-Referer': 'https://nptel-cloud-mcq.onrender.com',
       'X-Title': 'NPTEL Ace',

@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "cp index.src.html index.html && vite",
     "build": "cp index.src.html index.html && vite build && cp dist/index.html ./index.html && cp dist/assets/* ./assets/",
     "preview": "vite preview"
   },

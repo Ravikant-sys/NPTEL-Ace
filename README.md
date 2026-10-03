@@ -20,7 +20,7 @@ NPTEL Ace currently includes curated assignment questions, instant concept solut
 | :--- | :---: | :---: | :--- |
 | **Cloud Computing** | ☁️ | Weeks 1 – 12 + Grand Test | Virtualization, Distributed Systems, Cloud Architecture, SLA, Azure, GCP |
 | **Blockchain & Its Applications** | ⛓️ | Weeks 1 – 11 + Grand Test | Cryptography, Consensus Algorithms, Bitcoin, Ethereum, Smart Contracts |
-| **Introduction to Internet of Things (IoT)** | 📡 | Weeks 1 – 5 + Grand Test | Sensors, Actuators, Wireless Sensor Networks, IoT Protocols & M2M |
+| **Introduction to Internet of Things (IoT)** | 📡 | Weeks 1 – 8 + Grand Test | Sensors, Actuators, WSN, IoT Protocols, Python, Raspberry Pi, SDN & Cloud |
 | **Entrepreneurship** | 🚀 | Weeks 1 – 6 + Grand Test | Ideation, Customer Discovery, Prototyping, Disruption & Business Scaling |
 
 ---
