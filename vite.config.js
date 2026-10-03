@@ -6,6 +6,54 @@ import { fileURLToPath } from 'url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
+async function saveToMysql(item) {
+  try {
+    const mysql = await import('mysql2/promise')
+    const conn = await mysql.createConnection({
+      host: process.env.MYSQL_HOST || 'localhost',
+      user: process.env.MYSQL_USER || 'minion',
+      password: process.env.MYSQL_PASSWORD || '',
+      database: process.env.MYSQL_DATABASE || 'test',
+    })
+    await conn.execute(`
+      CREATE TABLE IF NOT EXISTS feedback (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(100),
+        course VARCHAR(50),
+        rating INT,
+        message TEXT,
+        created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+      )
+    `)
+    const [res] = await conn.execute(
+      'INSERT INTO feedback (name, course, rating, message) VALUES (?, ?, ?, ?)',
+      [item.name || 'Anonymous', item.course || 'general', item.rating || 5, item.message || '']
+    )
+    await conn.end()
+    return res.insertId
+  } catch (err) {
+    console.warn('[MySQL] Warning:', err.message)
+    return null
+  }
+}
+
+async function getFromMysql() {
+  try {
+    const mysql = await import('mysql2/promise')
+    const conn = await mysql.createConnection({
+      host: process.env.MYSQL_HOST || 'localhost',
+      user: process.env.MYSQL_USER || 'minion',
+      password: process.env.MYSQL_PASSWORD || '',
+      database: process.env.MYSQL_DATABASE || 'test',
+    })
+    const [rows] = await conn.execute('SELECT * FROM feedback ORDER BY id DESC')
+    await conn.end()
+    return rows
+  } catch {
+    return null
+  }
+}
+
 function feedbackStoragePlugin() {
   return {
     name: 'feedback-storage-plugin',
@@ -16,38 +64,45 @@ function feedbackStoragePlugin() {
           fs.mkdirSync(feedbackDir, { recursive: true })
         }
         const summaryFile = path.resolve(feedbackDir, 'feedbacks.json')
-        
+        const rootFeedbackFile = path.resolve(__dirname, 'feedback.json')
+
         if (req.method === 'POST') {
           let body = ''
           req.on('data', chunk => {
             body += chunk
           })
-          req.on('end', () => {
+          req.on('end', async () => {
             try {
               const data = JSON.parse(body || '{}')
               data.id = 'fb_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4)
               data.createdAt = new Date().toISOString()
 
-              // 1. Update aggregated list in feedback/feedbacks.json
+              // 1. Save to MySQL database
+              const mysqlId = await saveToMysql(data)
+              if (mysqlId) {
+                data.mysqlId = mysqlId
+              }
+
+              // 2. Also save to feedback.json file on PC as local backup
               let feedbacks = []
-              if (fs.existsSync(summaryFile)) {
+              if (fs.existsSync(rootFeedbackFile)) {
                 try {
-                  const content = fs.readFileSync(summaryFile, 'utf-8').trim()
+                  const content = fs.readFileSync(rootFeedbackFile, 'utf-8').trim()
                   if (content) feedbacks = JSON.parse(content)
                 } catch {
                   feedbacks = []
                 }
               }
               feedbacks.push(data)
-              fs.writeFileSync(summaryFile, JSON.stringify(feedbacks, null, 2), 'utf-8')
+              fs.writeFileSync(rootFeedbackFile, JSON.stringify(feedbacks, null, 2), 'utf-8')
 
-              // 2. Also write an individual JSON file for this feedback in feedback/
-              const safeName = (data.name || 'anonymous').replace(/[^a-zA-Z0-9_-]/g, '_').slice(0, 20)
-              const individualFile = path.resolve(feedbackDir, `feedback_${Date.now()}_${safeName}.json`)
-              fs.writeFileSync(individualFile, JSON.stringify(data, null, 2), 'utf-8')
+              // Also update feedback/ folder
+              try {
+                fs.writeFileSync(summaryFile, JSON.stringify(feedbacks, null, 2), 'utf-8')
+              } catch {}
 
               res.setHeader('Content-Type', 'application/json')
-              res.end(JSON.stringify({ success: true, count: feedbacks.length, feedback: data, savedTo: individualFile }))
+              res.end(JSON.stringify({ success: true, count: feedbacks.length, mysqlId }))
             } catch (err) {
               res.statusCode = 500
               res.setHeader('Content-Type', 'application/json')
@@ -55,19 +110,26 @@ function feedbackStoragePlugin() {
             }
           })
         } else if (req.method === 'GET') {
-          try {
-            let feedbacks = []
-            if (fs.existsSync(summaryFile)) {
-              const content = fs.readFileSync(summaryFile, 'utf-8').trim()
-              if (content) feedbacks = JSON.parse(content)
+          ;(async () => {
+            try {
+              const mysqlRows = await getFromMysql()
+              if (mysqlRows) {
+                res.setHeader('Content-Type', 'application/json')
+                return res.end(JSON.stringify({ success: true, count: mysqlRows.length, source: 'mysql', feedbacks: mysqlRows }))
+              }
+              let feedbacks = []
+              if (fs.existsSync(rootFeedbackFile)) {
+                const content = fs.readFileSync(rootFeedbackFile, 'utf-8').trim()
+                if (content) feedbacks = JSON.parse(content)
+              }
+              res.setHeader('Content-Type', 'application/json')
+              res.end(JSON.stringify({ success: true, count: feedbacks.length, source: 'file', feedbacks }))
+            } catch (err) {
+              res.statusCode = 500
+              res.setHeader('Content-Type', 'application/json')
+              res.end(JSON.stringify({ error: err.message }))
             }
-            res.setHeader('Content-Type', 'application/json')
-            res.end(JSON.stringify({ success: true, count: feedbacks.length, feedbacks }))
-          } catch (err) {
-            res.statusCode = 500
-            res.setHeader('Content-Type', 'application/json')
-            res.end(JSON.stringify({ error: err.message }))
-          }
+          })()
         } else {
           res.statusCode = 404
           res.end()

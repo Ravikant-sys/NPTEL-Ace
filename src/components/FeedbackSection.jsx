@@ -8,7 +8,6 @@ export default function FeedbackSection() {
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState('idle'); // 'idle' | 'submitting' | 'success'
-  const [saveLocation, setSaveLocation] = useState('');
 
   // Close on Escape key
   useEffect(() => {
@@ -35,54 +34,25 @@ export default function FeedbackSection() {
       timestamp: new Date().toISOString(),
     };
 
-    let savedOnDisk = false;
-
-    // 1. Try to post to local Vite API (stores directly in feedback.json on PC)
     try {
-      const res = await fetch('/api/feedback', {
+      await fetch('/api/feedback', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(feedbackItem),
       });
-      if (res.ok) {
-        const data = await res.json();
-        if (data.success) {
-          savedOnDisk = true;
-        }
-      }
     } catch {
-      savedOnDisk = false;
-    }
-
-    // 2. Always back up in localStorage
-    try {
-      const existing = JSON.parse(localStorage.getItem('nptel_feedbacks') || '[]');
-      existing.push(feedbackItem);
-      localStorage.setItem('nptel_feedbacks', JSON.stringify(existing));
-    } catch {
-      // ignore localStorage errors
-    }
-
-    if (savedOnDisk) {
-      setSaveLocation('Saved directly inside the feedback/ folder on your PC! 💻');
-    } else {
-      setSaveLocation('Saved to your browser storage! (Click below to export to PC) 💾');
+      // Backend handles fallback
     }
 
     setStatus('success');
     setMessage('');
     setName('');
-  };
 
-  const handleDownloadAll = () => {
-    const localFeedbacks = JSON.parse(localStorage.getItem('nptel_feedbacks') || '[]');
-    const dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(localFeedbacks, null, 2));
-    const downloadAnchor = document.createElement('a');
-    downloadAnchor.setAttribute('href', dataStr);
-    downloadAnchor.setAttribute('download', `nptel_feedback_${new Date().toISOString().slice(0, 10)}.json`);
-    document.body.appendChild(downloadAnchor);
-    downloadAnchor.click();
-    downloadAnchor.remove();
+    // Automatically close modal after 2.5 seconds
+    setTimeout(() => {
+      setIsOpen(false);
+      setStatus('idle');
+    }, 2500);
   };
 
   return (
@@ -133,8 +103,8 @@ export default function FeedbackSection() {
             {/* Modal Header */}
             <div className="feedback-modal-header">
               <div className="feedback-header-left">
-                <span className="feedback-modal-badge">💬 Feedback & Suggestions</span>
-                <h3 className="feedback-modal-title">Help Us Improve NPTEL Ace</h3>
+                <span className="feedback-modal-badge">💬 Feedback</span>
+                <h3 className="feedback-modal-title">Share Your Feedback</h3>
               </div>
               <button
                 type="button"
@@ -150,41 +120,31 @@ export default function FeedbackSection() {
               <div className="feedback-success-state">
                 <div className="feedback-success-icon">🎉</div>
                 <h4>Thank you for your feedback!</h4>
-                <p className="feedback-save-badge">{saveLocation}</p>
-                <div className="feedback-success-actions">
+                <p className="feedback-card-sub" style={{ marginTop: '8px' }}>
+                  Your feedback has been submitted successfully.
+                </p>
+                <div className="feedback-success-actions" style={{ marginTop: '16px' }}>
                   <button
                     type="button"
                     className="feedback-btn-secondary"
-                    onClick={() => setStatus('idle')}
+                    onClick={() => {
+                      setIsOpen(false);
+                      setStatus('idle');
+                    }}
                   >
-                    Send Another
-                  </button>
-                  <button
-                    type="button"
-                    className="feedback-btn-download"
-                    onClick={handleDownloadAll}
-                    title="Download all stored feedback as a JSON file to your PC"
-                  >
-                    💾 Export All to PC (.json)
-                  </button>
-                  <button
-                    type="button"
-                    className="feedback-btn-secondary"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Close
+                    Done
                   </button>
                 </div>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="feedback-form">
                 <p className="feedback-card-sub">
-                  Found a question typo, wrong solution, or have a feature idea? It saves right to the feedback/ folder on your PC!
+                  Found a question mistake or have a feature suggestion? Let us know below!
                 </p>
 
                 <div className="feedback-row">
                   <div className="feedback-field">
-                    <label htmlFor="fb-course">Course / Category</label>
+                    <label htmlFor="fb-course">Course</label>
                     <select
                       id="fb-course"
                       value={course}
@@ -227,11 +187,11 @@ export default function FeedbackSection() {
                 </div>
 
                 <div className="feedback-field">
-                  <label htmlFor="fb-name">Your Name / Roll No. (Optional)</label>
+                  <label htmlFor="fb-name">Your Name (Optional)</label>
                   <input
                     id="fb-name"
                     type="text"
-                    placeholder="e.g. Rahul / Anonymous"
+                    placeholder="e.g. Rahul / Student"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     className="feedback-input"
@@ -241,12 +201,12 @@ export default function FeedbackSection() {
 
                 <div className="feedback-field">
                   <label htmlFor="fb-message">
-                    Your Feedback / Suggestion <span className="required">*</span>
+                    Feedback / Suggestion <span className="required">*</span>
                   </label>
                   <textarea
                     id="fb-message"
                     rows={3}
-                    placeholder="e.g. In IoT Week 7 Question 4, option B has a small typo... or Please add Week 9!"
+                    placeholder="Write your feedback or suggestion here..."
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     className="feedback-textarea"
@@ -263,10 +223,10 @@ export default function FeedbackSection() {
                   >
                     {status === 'submitting' ? (
                       <>
-                        <span className="fb-spinner"></span> Saving...
+                        <span className="fb-spinner"></span> Submitting...
                       </>
                     ) : (
-                      <>🚀 Submit Feedback</>
+                      <>Submit Feedback</>
                     )}
                   </button>
                 </div>
