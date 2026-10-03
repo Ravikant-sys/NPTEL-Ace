@@ -6,6 +6,8 @@ import { shuffle } from '../utils/shuffle';
 import Confetti from '../components/Confetti';
 import MilestoneOverlay from '../components/MilestoneOverlay';
 import CelebrationVideo from '../components/CelebrationVideo';
+import AiHintPanel from '../components/AiHintPanel';
+import XpPopup from '../components/XpPopup';
 import cloudData from '../data/cloud.json';
 import blockchainData from '../data/blockchain.json';
 import iotData from '../data/iot.json';
@@ -33,6 +35,8 @@ export default function QuizPage() {
   const [bestStreak, setBestStreak] = useState(0);
   const [confettiTrigger, setConfettiTrigger] = useState(0);
   const [isAnswerCorrect, setIsAnswerCorrect] = useState(false);
+  const [xpTrigger, setXpTrigger] = useState(0);
+  const [slideDir, setSlideDir] = useState('right'); // 'right' | 'left'
 
   // Milestone tracking
   const [milestoneInfo, setMilestoneInfo] = useState(null);
@@ -134,6 +138,7 @@ export default function QuizPage() {
       setStreak(newStreak);
       if (newStreak > bestStreak) setBestStreak(newStreak);
       setConfettiTrigger(Date.now());
+      setXpTrigger(Date.now());
     } else {
       setStreak(0);
     }
@@ -182,6 +187,7 @@ export default function QuizPage() {
   };
 
   const advanceQuestion = () => {
+    setSlideDir('right');
     setCurrentIndex(prev => prev + 1);
     setSelectedOptions(new Set());
     setQuizState('selecting');
@@ -269,10 +275,12 @@ export default function QuizPage() {
             <span className="quiz-counter">
               <span className="current">{currentIndex + 1}</span> / {questions.length}
             </span>
-            <div className={`quiz-streak-badge ${streak >= 2 ? 'visible' : ''}`}>
-              🔥 <span>{streak}</span>
+            <div className={`quiz-streak-badge ${streak >= 2 ? 'visible' : ''} ${streak >= 5 ? 'hot' : ''}`}>
+              <span className="streak-flame">🔥</span>
+              <span className="streak-num" key={streak}>{streak}</span>
             </div>
           </div>
+          <XpPopup trigger={xpTrigger} amount={10} />
         </>
       )}
 
@@ -341,7 +349,7 @@ export default function QuizPage() {
       {(quizState === 'selecting' || quizState === 'feedback') && currentQ && (
         <>
           <main className="quiz-body">
-            <div className="question-container" key={currentIndex}>
+            <div className={`question-container slide-${slideDir}`} key={currentIndex}>
               <div className="question-label">
                 Question {currentIndex + 1} of {questions.length}
                 {isMSQ && <span className="msq-badge">MSQ — Multiple Options</span>}
@@ -417,6 +425,13 @@ export default function QuizPage() {
                   {currentQ.solution && (
                     <p className="feedback-solution">{currentQ.solution}</p>
                   )}
+                  <AiHintPanel
+                    key={currentIndex}
+                    question={currentQ.q}
+                    options={currentQ.options}
+                    correctIndices={correctIndices}
+                    solution={currentQ.solution}
+                  />
                 </div>
               )}
 

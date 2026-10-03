@@ -912,7 +912,549 @@
       ],
       "correctIndex": 2,
       "isMSQ": false,
-      "solution": "The write() function is used to control the position of the servo motor. It takes degree values (typically between 0 and 180) as an argument and rotates the motor to that specific angle. For example, servo.write(90) moves the servo to the 90-degree position. (See lecture 25 @9:57) ************END***********"
+      "solution": "The write() function is used to control the position of the servo motor. It takes degree values (typically between 0 and 180) as an argument and rotates the motor to that specific angle. For example, servo.write(90) moves the servo to the 90-degree position. (See lecture 25 @9:57)"
+    }
+  ],
+  "6": [
+    {
+      "q": "[Week 6] What are the five basic data types available in Python, as introduced in the lecture?",
+      "options": [
+        "Numbers, Strings, List, Tuple, Dictionary",
+        "Integer, Float, Boolean, Char, Byte",
+        "Array, Struct, Class, Object, Set",
+        "Numbers, Strings, Queue, Stack, Graph"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "The lecture states that Python has five data types: Numbers, String, List, Tuple, and Dictionary. See Lecture 26 (Introduction to Python Programming – Part I) @ 15:50"
+    },
+    {
+      "q": "[Week 6] Which keyword is used to define a function in Python?",
+      "options": [
+        "func",
+        "def",
+        "define",
+        "function"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "A function in Python is defined using the def keyword, followed by the function name and its arguments. See Lecture 26 (Introduction to Python Programming – Part I) @ 19:20"
+    },
+    {
+      "q": "[Week 6] In Python's exception handling, which keyword is used to handle an exception raised inside the try block?",
+      "options": [
+        "catch",
+        "except",
+        "handle",
+        "rescue"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Python uses the try, except and else block structure for exception handling; the except block catches the exception raised in the try block. See Lecture 26 (Introduction to Python Programming – Part I) @ 28:55"
+    },
+    {
+      "q": "[Week 6] Which mode of Python's open() function is used to add data to the end of an existing file without erasing its existing content?",
+      "options": [
+        "r (read mode)",
+        "w (write mode)",
+        "a (append mode)",
+        "r+ (read and write mode)"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Python supports four basic file modes: r (read), w (write), a (append), and r+ (read and write). The append mode adds new data to the end of the file without deleting existing content. See Lecture 27 (Introduction to Python Programming – Part II) @ 02:55"
+    },
+    {
+      "q": "[Week 6] Which Python library, installable via pip, is used for image read/write operations as covered in the lecture?",
+      "options": [
+        "NumPy",
+        "PIL / Pillow",
+        "OpenCV",
+        "Matplotlib"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "PIL (Python Image Library) is used to work with image files. It is installed using 'sudo pip install pillow'; PIL supports up to Python 2.7 while Pillow supports Python 3.x. See Lecture 27 (Introduction to Python Programming – Part II) @ 17:25"
+    },
+    {
+      "q": "[Week 6] Which socket_type value is used while creating a TCP/IP socket in Python's socket module?",
+      "options": [
+        "SOCK_DGRAM",
+        "SOCK_STREAM",
+        "SOCK_RAW",
+        "SOCK_SEQPACKET"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "A socket is created using socket.socket(socket_family, socket_type, protocol). For a TCP/IP (connection-oriented) socket, socket_family is AF_INET and socket_type is SOCK_STREAM. See Lecture 27 (Introduction to Python Programming – Part II) @ 24:40"
+    },
+    {
+      "q": "[Week 6] How many GPIO pins does the Raspberry Pi 3 Model B have, as shown in the specifications table?",
+      "options": [
+        "26",
+        "32",
+        "40",
+        "44"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "As per the specifications table, the Raspberry Pi 3 Model B, Raspberry Pi 2 Model B, and Raspberry Pi Zero all have 40 GPIO pins. See Lecture 28 (Introduction to Raspberry Pi – Part I) @ 05:10"
+    },
+    {
+      "q": "[Week 6] Which of the following is an officially supported operating system for Raspberry Pi mentioned in the lecture?",
+      "options": [
+        "Raspbian",
+        "Windows XP",
+        "macOS",
+        "Solaris"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "Raspbian and NOOBS are the officially supported operating systems for Raspberry Pi. Ubuntu Mate, Snappy Ubuntu Core, Windows 10 Core, Pinet, and RISC OS are examples of third-party operating systems. See Lecture 28 (Introduction to Raspberry Pi – Part I) @ 12:05"
+    },
+    {
+      "q": "[Week 6] Raspberry Pi is best described as a:",
+      "options": [
+        "Printer",
+        "Smartphone",
+        "Wi-Fi router",
+        "Single-board computer"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "The lecture introduces Raspberry Pi as a computer that fits in your palm — a low-cost, single-board computer that is easy to access and use. See Lecture 28 (Introduction to Raspberry Pi – Part I) @ 04:45"
+    },
+    {
+      "q": "[Week 6] Which command is used to install the GPIO library on Raspberry Pi before programming the blinking LED example?",
+      "options": [
+        "sudo apt-get install python-rpi.gpio",
+        "pip install gpio",
+        "sudo apt-get install led-lib",
+        "npm install rpi-gpio"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "After installing Python development tools using 'sudo apt-get install python-dev', the GPIO library is installed using 'sudo apt-get install python-rpi.gpio'. See Lecture 29 (Introduction to Raspberry Pi – Part II) @ 07:43"
+    },
+    {
+      "q": "[Week 6] Where is the CSI camera connector slot located on the Raspberry Pi board?",
+      "options": [
+        "Between the USB ports",
+        "Between the Ethernet port and the HDMI port",
+        "Next to the power supply pin",
+        "On the underside of the board"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "The Raspberry Pi Camera connects through a dedicated CSI slot, which is placed between the Ethernet port and the HDMI port on the board. See Lecture 29 (Introduction to Raspberry Pi – Part II) @ 18:27"
+    },
+    {
+      "q": "[Week 6] Which terminal command captures a still image using the Raspberry Pi camera?",
+      "options": [
+        "raspistill -o image.jpg",
+        "raspicam capture",
+        "pi-camera snap",
+        "capture.py --img"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "Running 'raspistill -o image.jpg' in the terminal captures an image using the Raspberry Pi camera and stores it as image.jpg. See Lecture 29 (Introduction to Raspberry Pi – Part II) @ 19:35"
+    },
+    {
+      "q": "[Week 6] What does DHT stand for in the DHT sensor used with Raspberry Pi in the auto-cooling system?",
+      "options": [
+        "Digital Heat Transfer",
+        "Digital Humidity and Temperature",
+        "Direct Hardware Trigger",
+        "Dual Humidity Thermostat"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "DHT stands for Digital Humidity and Temperature Sensor. It has 4 pins: PIN 1 (3.3V–5V power supply), PIN 2 (Data), PIN 3 (Null), and PIN 4 (Ground). See Lecture 30 (Implementation of IoT with Raspberry Pi – Part I) @ 05:20"
+    },
+    {
+      "q": "[Week 6] How many output terminals does the relay used in the temperature-dependent auto-cooling system have, as shown in the lecture?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "The relay is a mechanical/electromechanical switch with 3 output terminals (left to right): NO (normal open), Common, and NC (normal close). See Lecture 30 (Implementation of IoT with Raspberry Pi – Part I) @ 07:50"
+    },
+    {
+      "q": "[Week 6] State whether True or False: In the temperature-dependent auto-cooling system, the fan operates when the surrounding temperature rises above the threshold value specified in the code.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "The lecture demonstrates that the fan is switched on whenever the measured temperature exceeds the threshold value set in the program. See Lecture 30 (Implementation of IoT with Raspberry Pi – Part I) @ 18:14"
+    }
+  ],
+  "7": [
+    {
+      "q": "[Week 7] In the remote data logging system, which socket type is used to send sensor data from the client to the server?",
+      "options": [
+        "SOCK_STREAM",
+        "SOCK_DGRAM",
+        "SOCK_RAW",
+        "SOCK_SEQPACKET"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "The client creates a UDP socket using socket.socket(socket.AF_INET, socket.SOCK_DGRAM) to send the sensor readings to the server. See Lecture 31 (Implementation of IoT with Raspberry Pi – Part 2) @ 07:10"
+    },
+    {
+      "q": "[Week 7] Which Adafruit function is used in the client code to read humidity and temperature values from the DHT sensor?",
+      "options": [
+        "Adafruit_DHT.read_retry()",
+        "Adafruit_DHT.get_data()",
+        "Adafruit_DHT.sense()",
+        "Adafruit_DHT.capture()"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "The sensordata() function calls Adafruit_DHT.read_retry(sensor,17), which returns the humidity and temperature values from the DHT sensor. See Lecture 31 (Implementation of IoT with Raspberry Pi – Part 2) @ 04:50"
+    },
+    {
+      "q": "[Week 7] Where does the server in the remote data logging example save the data received from the client?",
+      "options": [
+        "In a MySQL database",
+        "In a text file named Datalog.txt",
+        "On a cloud dashboard",
+        "In an Excel spreadsheet"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "The server code opens 'Datalog.txt' in append mode and writes the received message from the client into this text file. See Lecture 31 (Implementation of IoT with Raspberry Pi – Part 2) @ 15:40"
+    },
+    {
+      "q": "[Week 7] Which Python string function is used to split the comma-separated sensor data into separate values on the server?",
+      "options": [
+        "split()",
+        "divide()",
+        "partition()",
+        "separate()"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "The split() function splits a string into multiple strings based on a specified separator/delimiter, e.g. Data.split(\",\") splits data wherever a comma is found. See Lecture 32 (Implementation of IoT with Raspberry Pi – Part 3) @ 08:40"
+    },
+    {
+      "q": "[Week 7] State whether True or False: Matplotlib Python library is used to plot the temperature and humidity data received at the server in the lecture.",
+      "options": [
+        "False",
+        "True"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "MATPLOTLIB is a Python library used to create 2D plots; functions such as plot(), xlabel(), ylabel(), and title() are used to plot and label the sensor data. See Lecture 32 (Implementation of IoT with Raspberry Pi – Part 3) @ 12:15"
+    },
+    {
+      "q": "[Week 7] Which matplotlib function turns on interactive mode so that the plot updates in real time as new data arrives?",
+      "options": [
+        "ion()",
+        "grid()",
+        "subplot()",
+        "figure()"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "ion() turns on the interactive mode in matplotlib. Other common plotting functions mentioned include figure(), grid(), subplot(), close(), and scatter(). See Lecture 32 (Implementation of IoT with Raspberry Pi – Part 3) @ 23:25"
+    },
+    {
+      "q": "[Week 7] In a traditional (non-SDN) network, where does the routing protocol logic (e.g., OSPF) mainly execute?",
+      "options": [
+        "In a centralized controller",
+        "At the individual switches",
+        "On the end-user device",
+        "In the cloud"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "In the current network, protocols like OSPF execute at the switches, which forward traffic in a distributed manner with no centralized control. See Lecture 33 (Software-Defined Networking – Part I) @ 04:10"
+    },
+    {
+      "q": "[Week 7] In which year was the OpenFlow project — from which the idea of software-defined networking originated — presented at ACM SIGCOMM?",
+      "options": [
+        "2006",
+        "2008",
+        "2009",
+        "2011"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "The idea of software-defined networking originated from the OpenFlow project, presented at ACM SIGCOMM in 2008. Stanford published the OpenFlow V1.0.0 specification the following year. See Lecture 33 (Software-Defined Networking – Part I) @ 10:50"
+    },
+    {
+      "q": "[Week 7] What message does a switch send to the SDN controller when it receives a packet for which no matching flow-rule exists?",
+      "options": [
+        "PACKET-IN message",
+        "FLOW-REQUEST message",
+        "RULE-MISS alert",
+        "CONTROL-SYNC message"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "When no flow-rule is present for an incoming request, the switch sends a PACKET-IN message to the controller, which then decides a suitable flow-rule and inserts it at the switch. See Lecture 33 (Software-Defined Networking – Part I) @ 22:33"
+    },
+    {
+      "q": "[Week 7] Which SDN API is used for communication between the control layer and the infrastructure layer?",
+      "options": [
+        "Northbound API",
+        "Southbound API",
+        "East-Westbound API",
+        "North-Southbound API"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "The Southbound API is used to communicate between the control layer and the infrastructure layer using the OpenFlow protocol. The Northbound API communicates between the control and application layers. See Lecture 34 (Software-Defined Networking – Part II) @ 02:00"
+    },
+    {
+      "q": "[Week 7] According to the lecture, approximately how many requests per second can a typical SDN controller handle through a single thread?",
+      "options": [
+        "50",
+        "100",
+        "200",
+        "500"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "The lecture states that a controller can typically handle around 200 requests in a second through a single thread. See Lecture 34 (Software-Defined Networking – Part II) @ 04:10"
+    },
+    {
+      "q": "[Week 7] Which control mechanism is described where the entire network's control decisions are taken by a single controller?",
+      "options": [
+        "Distributed control",
+        "Centralized control",
+        "Hierarchical control",
+        "Federated control"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "In centralized control, control decisions are taken in a centralized manner by a single controller, unlike distributed control where each subnetwork is controlled by a different controller. See Lecture 34 (Software-Defined Networking – Part II) @ 08:15"
+    },
+    {
+      "q": "[Week 7] Which of the following is listed as a benefit of integrating SDN with IoT?",
+      "options": [
+        "Increased hardware cost",
+        "Visibility of network resources",
+        "Reduced sensor accuracy",
+        "Elimination of all controllers"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Benefits of integrating SDN in IoT include intelligent routing decisions, simplified information collection/analysis/decision-making, visibility of network resources, and intelligent traffic pattern analysis. See Lecture 35 (Software-Defined IoT Networking – Part I) @ 02:50"
+    },
+    {
+      "q": "[Week 7] According to the lecture, what is a key resource-constraint challenge in wireless sensor networks that motivates software-defined WSN?",
+      "options": [
+        "Excess bandwidth",
+        "Limited memory for control programs",
+        "Too many controllers",
+        "Unlimited computation power"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Wireless sensor network challenges include real-time programming of sensor nodes, vendor-specific architecture, resource-constrained devices, and limited memory, meaning too many control programs cannot be inserted. See Lecture 35 (Software-Defined IoT Networking – Part I) @ 08:10"
+    },
+    {
+      "q": "[Week 7] In the SDN-WISE protocol stack for sensor nodes, what does \"INPP\" stand for?",
+      "options": [
+        "Integrated Node Path Protocol",
+        "Internal Node Power Processing",
+        "In Network Packet Processing",
+        "IoT Network Priority Protocol"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "In the SDN-WISE protocol stack, the forwarding layer above IEEE 802.15.4 consists of flow-rules, and INPP stands for In Network Packet Processing. See Lecture 35 (Software-Defined IoT Networking – Part I) @ 15:35"
+    }
+  ],
+  "8": [
+    {
+      "q": "[Week 8] Which of the following is listed as a problem in traditional (non-SDN) mobile networks?",
+      "options": [
+        "Too flexible hardware architecture",
+        "Excess centralized control",
+        "Very low operational cost",
+        "Difficult to scale due to static, over-provisioned networks"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "Traditional mobile networks are difficult to scale because static, over-provisioned networks are inflexible to manage high-demand mobile traffic; they are also difficult to manage, inflexible, and cost-expensive. See Lecture 36 (Software-Defined IoT Networking – Part II, slide 3)"
+    },
+    {
+      "q": "[Week 8] In the ODIN architecture for software-defined wireless networks, what does the 'Odin agent' do?",
+      "options": [
+        "It is placed at the controller end to manage policies",
+        "It replaces the OpenFlow protocol entirely",
+        "It is placed with the physical devices to communicate with the controller",
+        "It performs billing for cloud resources"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "In ODIN, an agent is placed at access points (with the physical devices) to communicate with the controller, while the Odin master resides at the controller end. See Lecture 36 (Software-Defined IoT Networking – Part II, slide 11)"
+    },
+    {
+      "q": "[Week 8] What is the primary goal of Mobi-Flow's proactive rule placement approach in Software-Defined IoT?",
+      "options": [
+        "To place flow-rules randomly across all access points",
+        "To predict users' future location and place flow-rules at APs accordingly",
+        "To eliminate the need for a controller",
+        "To increase the number of PACKET-IN messages"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Mobi-Flow predicts the location of end-users at time (t+1) while they are at time (t), and places flow-rules at the access points that can be associated with the users based on their predicted locations, using an order-K Markov predictor. See Lecture 36 (Software-Defined IoT Networking – Part II, slides 15–16)"
+    },
+    {
+      "q": "[Week 8] Which simulation tool is mentioned in the lecture for experimenting with wireless software-defined networks, supporting both wired and wireless (IEEE 802.11) protocols?",
+      "options": [
+        "CloudSim",
+        "NS2",
+        "GreenCloud",
+        "Mininet-WiFi"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "Mininet-WiFi can be used to deploy a network supporting both wired (Ethernet) and wireless (WiFi, IEEE 802.11) protocols, while ONOS can be used to place the controllers. See Lecture 36 (Software-Defined IoT Networking – Part II, slide 21)"
+    },
+    {
+      "q": "[Week 8] According to the NIST definition quoted in the lecture, cloud computing enables on-demand network access to a shared pool of what?",
+      "options": [
+        "Fixed, dedicated hardware resources",
+        "Configurable computing resources",
+        "Only storage resources",
+        "Only networking resources"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "NIST defines cloud computing as a model for enabling convenient, on-demand network access to a shared pool of configurable computing resources such as networks, servers, storage, and applications. See Lecture 37 (Cloud Computing – Fundamentals, slide 4)"
+    },
+    {
+      "q": "[Week 8] Which of the following is one of the essential characteristics of cloud computing as defined by NIST?",
+      "options": [
+        "Rapid elasticity",
+        "Manual resource allocation",
+        "Single-tenant only access",
+        "Fixed billing regardless of usage"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "NIST lists rapid elasticity as an essential characteristic, meaning cloud resource allocation and release should be rapid, elastic, and automatic, giving consumers the impression of infinite resources. See Lecture 37 (Cloud Computing – Fundamentals, slide 9)"
+    },
+    {
+      "q": "[Week 8] Which cloud deployment model is set up for the exclusive use of a single organization, typically managed on-premises or by a third party off-premises?",
+      "options": [
+        "Public cloud",
+        "Private cloud",
+        "Community cloud",
+        "Multi-cloud"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "A private cloud is a cloud set-up functioned only for a single organization, typically managed by the organization itself (on-premises) or by a third party (off-premises). See Lecture 37 (Cloud Computing – Fundamentals, slide 20)"
+    },
+    {
+      "q": "[Week 8] Which of the following is given as an example of a public cloud provider in the lecture?",
+      "options": [
+        "Amazon Web Services (AWS)",
+        "A company's internal private data center",
+        "A single organization's dedicated server room",
+        "A community-only cloud shared by hospitals"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "Public cloud examples given include Amazon Web Services (AWS), Google Compute Engine, and Microsoft Azure — cloud set-ups available for the use of any person or industry. See Lecture 37 (Cloud Computing – Fundamentals, slide 19)"
+    },
+    {
+      "q": "[Week 8] Which cloud service model provides on-demand delivery of computing infrastructure such as servers, storage, network, and operating system?",
+      "options": [
+        "SaaS",
+        "PaaS",
+        "IaaS",
+        "DBaaS"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Infrastructure-as-a-Service (IaaS) contains the basic building blocks for cloud IT, providing access to networking features, computers (virtual or dedicated hardware), storage, and operating systems. See Lecture 38 (Cloud Computing – Service Models, slide 4)"
+    },
+    {
+      "q": "[Week 8] In the IaaS working methodology, which component allows multiple virtual machines to share the same physical hardware?",
+      "options": [
+        "DNS server",
+        "Load balancer",
+        "Firewall",
+        "Hypervisor"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "In IaaS, the hypervisor sits above the physical hardware and manages multiple virtual machines (VMs), each running its own operating system, on a virtualized server. See Lecture 38 (Cloud Computing – Service Models, slide 5)"
+    },
+    {
+      "q": "[Week 8] Which cloud service model is described as 'application middleware offered as a service to developers', removing the need to manage underlying hardware and operating systems?",
+      "options": [
+        "IaaS",
+        "SaaS",
+        "PaaS",
+        "Community Cloud"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Platform-as-a-Service (PaaS) removes the need for organizations to manage underlying infrastructure (hardware and OS) and lets developers focus on deploying and managing their applications; it is described as application middleware offered as a service. See Lecture 38 (Cloud Computing – Service Models, slide 15)"
+    },
+    {
+      "q": "[Week 8] What is the primary purpose of a Service Level Agreement (SLA) in cloud service management?",
+      "options": [
+        "To define the physical location of the data center",
+        "To define the non-functional requirements expected from the service provider",
+        "To specify the programming language used by the cloud provider",
+        "To list the hardware vendors used by the provider"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "An SLA defines the non-functional requirements expected from the service provider and provides a roadmap with clearly defined deliverables, describing the quality, utility, and warranty of services expected by the customer. See Lecture 39 (Cloud Computing – Service Management and Security, slide 4)"
+    },
+    {
+      "q": "[Week 8] In cloud service accounting and billing, what does 'service accounting' primarily aim to obtain?",
+      "options": [
+        "Resource usage information, typically in the form of records",
+        "The physical address of end-users",
+        "The source code of hosted applications",
+        "The marketing budget of the provider"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "Service accounting aims to obtain resource usage information, typically in the form of records, depending on infrastructure and service monitoring where usage information is obtained from metric measurements. See Lecture 39 (Cloud Computing – Service Management and Security, slide 5)"
+    },
+    {
+      "q": "[Week 8] What is the main purpose of using cloud simulators such as CloudSim before actual deployment?",
+      "options": [
+        "To permanently replace the need for real cloud infrastructure",
+        "To physically manufacture cloud hardware",
+        "To increase the billing cost of cloud services",
+        "To provide a reliable, scalable, and repeatable environment for pre-deployment performance evaluation"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "Simulation tools provide a reliable, scalable, and repeatable environment for performance evaluation, facilitating pre-deployment tests of services at no cost and enabling repeatable evaluation. See Lecture 40 (Cloud Computing – Case Studies, slides 2–3)"
+    },
+    {
+      "q": "[Week 8] CloudSim, a widely used cloud simulation framework, was developed at which institution and is based on which programming language?",
+      "options": [
+        "Stanford University, based on Python",
+        "CLOUDS Lab, University of Melbourne, based on Java",
+        "MIT, based on C++",
+        "IIT Kharagpur, based on JavaScript"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "CloudSim is a simulation framework that models cloud computing environments (data centers, VMs, applications, users, and network topology), written in a Java-based environment, and developed at the CLOUDS Lab of the University of Melbourne. See Lecture 40 (Cloud Computing – Case Studies, slide 5)"
     }
   ]
 }

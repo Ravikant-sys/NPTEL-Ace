@@ -6,6 +6,8 @@ import AdminToast from './AdminToast';
 export default function Header() {
   const { theme, toggleTheme } = useTheme();
   const [showAdmin, setShowAdmin] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [themeAnimating, setThemeAnimating] = useState(false);
   const clickCount = useRef(0);
   const lastClickTime = useRef(0);
 
@@ -16,6 +18,15 @@ export default function Header() {
     } catch (e) {
       // silent
     }
+  }, []);
+
+  // Scroll shadow effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 8);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const handleLogoClick = (e) => {
@@ -32,9 +43,15 @@ export default function Header() {
     }
   };
 
+  const handleThemeToggle = () => {
+    setThemeAnimating(true);
+    toggleTheme();
+    setTimeout(() => setThemeAnimating(false), 500);
+  };
+
   return (
     <>
-      <header className="site-header">
+      <header className={`site-header header-entrance ${scrolled ? 'header-scrolled' : ''}`}>
         <div className="header-left">
           <Link to="/" className="header-logo" onClick={handleLogoClick}>
             <img src="/logo.jpg" alt="NPTEL Ace" className="logo-img" />
@@ -47,8 +64,8 @@ export default function Header() {
         <div className="header-right">
           <button
             id="theme-toggle"
-            className="theme-btn"
-            onClick={toggleTheme}
+            className={`theme-btn ${themeAnimating ? 'theme-btn-spin' : ''}`}
+            onClick={handleThemeToggle}
             aria-label="Toggle Theme"
           >
             {theme === 'light' ? (

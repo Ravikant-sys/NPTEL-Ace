@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useTheme } from '../hooks/useTheme';
 import { useScoreHistory } from '../hooks/useScoreHistory';
@@ -44,6 +44,9 @@ export default function HomePage() {
   const [selectedCourse, setSelectedCourse] = useState(() => {
     return localStorage.getItem('selectedCourse') || null;
   });
+  const [viewState, setViewState] = useState(selectedCourse ? 'dashboard' : 'courses');
+  const [transitioning, setTransitioning] = useState(false);
+  const dashboardRef = useRef(null);
 
   useEffect(() => {
     setCourseTheme(selectedCourse);
@@ -57,17 +60,32 @@ export default function HomePage() {
   const activeCourseObj = COURSES.find(c => c.id === selectedCourse);
 
   const handleSelectCourse = (courseId) => {
-    setSelectedCourse(courseId);
+    setTransitioning(true);
+    setTimeout(() => {
+      setSelectedCourse(courseId);
+      setViewState('dashboard');
+      setTransitioning(false);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 220);
   };
 
   const handleBackToCourses = () => {
-    setSelectedCourse(null);
+    setTransitioning(true);
+    setTimeout(() => {
+      setSelectedCourse(null);
+      setViewState('courses');
+      setTransitioning(false);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 220);
   };
 
   return (
     <main className="main-content">
-      {!selectedCourse ? (
-        <div id="view-courses">
+      {viewState === 'courses' && (
+        <div
+          id="view-courses"
+          className={`home-view ${transitioning ? 'home-view-exit' : 'home-view-enter'}`}
+        >
           <div className="hero-section">
             <img src="/logo.jpg" alt="NPTEL Ace Mascot" className="hero-mascot" />
             <h1 className="hero-title">
@@ -77,7 +95,7 @@ export default function HomePage() {
           </div>
 
           <div className="course-grid">
-            {COURSES.map(course => {
+            {COURSES.map((course, index) => {
               const weekKeys = Object.keys(course.data);
               const weeksCount = weekKeys.length;
               const questionsCount = weekKeys.reduce(
@@ -90,6 +108,7 @@ export default function HomePage() {
                   key={course.id}
                   className="course-card"
                   id={`card-${course.id}`}
+                  style={{ animationDelay: `${index * 0.08}s` }}
                   onClick={() => handleSelectCourse(course.id)}
                 >
                   <div className="course-icon">{course.icon}</div>
@@ -101,15 +120,27 @@ export default function HomePage() {
                       <span className="course-stat">❓ {questionsCount} questions</span>
                     </div>
                   </div>
+                  <div className="course-card-arrow">›</div>
                 </div>
               );
             })}
           </div>
         </div>
-      ) : (
-        <div id="view-dashboard" className="view-transition">
+      )}
+
+      {viewState === 'dashboard' && (
+        <div
+          id="view-dashboard"
+          ref={dashboardRef}
+          className={`home-view ${transitioning ? 'home-view-exit' : 'home-view-enter'}`}
+        >
           <div className="dashboard-header">
-            <h2 className="dashboard-title">{activeCourseObj?.name}</h2>
+            <div className="dashboard-title-group">
+              <span className="dashboard-course-icon">
+                {COURSES.find(c => c.id === selectedCourse)?.icon}
+              </span>
+              <h2 className="dashboard-title">{activeCourseObj?.name}</h2>
+            </div>
             <button className="back-to-courses" onClick={handleBackToCourses}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -133,13 +164,15 @@ export default function HomePage() {
             {activeCourseObj &&
               Object.keys(activeCourseObj.data)
                 .sort((a, b) => parseInt(a, 10) - parseInt(b, 10))
-                .map(week => {
+                .map((week, idx) => {
                   const best = getBest(selectedCourse, week);
+                  const hasScore = !!best;
                   return (
                     <Link
                       key={week}
                       to={`/quiz/${selectedCourse}/${week}`}
-                      className="week-card"
+                      className={`week-card ${hasScore ? 'week-card-done' : ''}`}
+                      style={{ animationDelay: `${idx * 0.05}s` }}
                     >
                       <span className="week-number">{week}</span>
                       <span className="week-label">Week</span>
@@ -148,6 +181,7 @@ export default function HomePage() {
                           Best: {best.score}/{best.total}
                         </span>
                       )}
+                      {hasScore && <span className="week-done-tick">✓</span>}
                     </Link>
                   );
                 })}
@@ -157,6 +191,7 @@ export default function HomePage() {
               <Link
                 to={`/quiz/${selectedCourse}/grand`}
                 className="week-card grand-test-card"
+                style={{ animationDelay: `${Object.keys(activeCourseObj.data).length * 0.05 + 0.05}s` }}
               >
                 <span className="week-number">🏆</span>
                 <span className="week-label">Grand Test — All Weeks</span>
