@@ -1268,25 +1268,396 @@ body::after {
     animation: slideUp 0.3s ease-out;
 }
 
-/* ── Responsive ─────────────────────────────────────────────── */
-@media (max-width: 600px) {
-    .hero-title { font-size: 2rem; }
-    .question-text { font-size: 1.2rem; }
-    .quiz-body { padding: 80px 16px 150px; }
+/* ── Comprehensive Phone Responsiveness & Touch Ergonomics ──── */
+:root {
+    --safe-top: env(safe-area-inset-top, 0px);
+    --safe-bottom: env(safe-area-inset-bottom, 0px);
+    --safe-left: env(safe-area-inset-left, 0px);
+    --safe-right: env(safe-area-inset-right, 0px);
+}
+
+button,
+.course-card,
+.week-card,
+.option-card,
+.result-btn,
+.theme-btn,
+.quiz-close-btn {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+@media (max-width: 640px) {
+    /* Safe Area & Layout */
+    .site-header {
+        padding: max(10px, var(--safe-top)) 16px 10px;
+    }
+
+    .header-logo {
+        font-size: 1.25rem;
+        gap: 8px;
+    }
+
+    .header-logo .logo-img {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+    }
+
+    .header-right {
+        gap: 8px;
+    }
+
+    .streak-display {
+        padding: 5px 10px;
+        font-size: 0.85rem;
+    }
+
+    .theme-btn {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+    }
+
+    .main-content {
+        padding: 16px 14px calc(60px + var(--safe-bottom));
+        max-width: 100%;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        padding: 12px 0 20px;
+    }
+
+    .hero-mascot {
+        width: clamp(105px, 28vw, 130px);
+        height: clamp(105px, 28vw, 130px);
+        margin-bottom: 12px;
+    }
+
+    .hero-title {
+        font-size: clamp(1.85rem, 7.5vw, 2.3rem);
+        margin-bottom: 6px;
+    }
+
+    .hero-subtitle {
+        font-size: 0.92rem;
+    }
+
+    /* Course Cards */
+    .course-grid {
+        gap: 12px;
+        margin-top: 20px;
+    }
+
+    .course-card {
+        padding: 16px 14px;
+        gap: 12px;
+        border-radius: 14px;
+    }
+
+    .course-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 2.1rem;
+        border-radius: 12px;
+    }
+
+    .course-info h3 {
+        font-size: 1.12rem;
+        line-height: 1.25;
+    }
+
+    .course-info p {
+        font-size: 0.82rem;
+        line-height: 1.35;
+    }
+
+    .course-stats {
+        gap: 10px;
+        margin-top: 6px;
+    }
+
+    .course-stat {
+        font-size: 0.76rem;
+    }
+
+    .course-card::after {
+        width: 26px;
+        height: 26px;
+        right: 14px;
+    }
+
+    /* Dashboard & Weeks Grid */
+    .dashboard-header {
+        margin-bottom: 16px;
+        padding-bottom: 12px;
+    }
+
+    .dashboard-title {
+        font-size: 1.25rem;
+    }
+
+    .back-to-courses {
+        padding: 6px 12px;
+        font-size: 0.82rem;
+        border-radius: 10px;
+    }
+
     .dashboard-grid {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+    }
+
+    .week-card {
+        padding: 12px 6px;
+        border-radius: 13px;
+        gap: 4px;
+        min-height: 80px;
+    }
+
+    .week-number {
+        font-size: 1.35rem;
+        line-height: 1;
+    }
+
+    .week-label {
+        font-size: 0.7rem;
+        letter-spacing: 0.2px;
+    }
+
+    .week-score-badge {
+        font-size: 0.65rem;
+        padding: 1px 6px;
+        border-radius: 6px;
+    }
+
+    .grand-test-card {
+        grid-column: 1 / -1;
+        padding: 16px 14px;
+        gap: 8px;
+    }
+
+    .grand-test-card .week-number {
+        font-size: 1.25rem;
+    }
+
+    .grand-test-card .week-label {
+        font-size: 0.85rem;
+    }
+
+    /* Quiz Header & Progress Bar */
+    .quiz-progress-bar {
+        height: 8px;
+    }
+
+    .quiz-header {
+        top: 8px;
+        padding: 8px 14px;
+        height: 50px;
+    }
+
+    .quiz-close-btn {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        font-size: 1.15rem;
+    }
+
+    .quiz-counter {
+        font-size: 0.92rem;
+    }
+
+    /* Quiz Body */
+    .quiz-body {
+        padding: calc(64px + var(--safe-top)) 14px calc(140px + var(--safe-bottom));
+        justify-content: flex-start;
+        margin-top: 8px;
+    }
+
+    .question-label {
+        font-size: 0.78rem;
+        margin-bottom: 8px;
+    }
+
+    .question-text {
+        font-size: clamp(1.1rem, 4.2vw, 1.28rem);
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+
+    .options-grid {
         gap: 10px;
     }
-    .week-card { padding: 16px 12px; }
-    .week-number { font-size: 1.5rem; }
-    .results-stats { gap: 12px; }
-    .result-stat-card { min-width: 90px; padding: 14px 18px; }
-    .result-stat-value { font-size: 1.8rem; }
-    .course-card { padding: 18px; gap: 14px; }
-    .course-icon { width: 48px; height: 48px; font-size: 2.2rem; }
-    .site-header { padding: 10px 16px; }
-    .header-logo { font-size: 1.2rem; }
+
+    .option-card {
+        padding: 13px 14px;
+        gap: 12px;
+        border-radius: 13px;
+        min-height: 52px;
+    }
+
+    .option-badge {
+        width: 30px;
+        height: 30px;
+        font-size: 0.82rem;
+        border-radius: 8px;
+    }
+
+    .option-text {
+        font-size: 0.92rem;
+        line-height: 1.4;
+    }
+
+    /* Quiz Bottom Bar */
+    .quiz-bottom-bar {
+        padding: 12px 14px max(14px, var(--safe-bottom));
+    }
+
+    .feedback-section {
+        margin-bottom: 10px;
+    }
+
+    .feedback-title {
+        font-size: 1.05rem;
+    }
+
+    .feedback-solution {
+        font-size: 0.85rem;
+        max-height: 110px;
+        line-height: 1.45;
+        padding-right: 4px;
+    }
+
+    .quiz-action-btn {
+        padding: 14px;
+        font-size: 0.96rem;
+        border-radius: 12px;
+        min-height: 48px;
+    }
+
+    /* Results Screen */
+    .results-screen {
+        padding: 30px 16px;
+    }
+
+    .celebration-video {
+        width: min(250px, 85vw);
+        border-radius: 18px;
+    }
+
+    .results-emoji {
+        font-size: 3.5rem;
+        margin-bottom: 10px;
+    }
+
+    .results-title {
+        font-size: 1.6rem;
+        margin-bottom: 6px;
+    }
+
+    .results-subtitle {
+        font-size: 0.92rem;
+        margin-bottom: 20px;
+    }
+
+    .results-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        width: 100%;
+        max-width: 320px;
+        margin-bottom: 24px;
+    }
+
+    .result-stat-card {
+        min-width: unset;
+        padding: 14px 10px;
+        border-radius: 12px;
+    }
+
+    .result-stat-value {
+        font-size: 1.65rem;
+    }
+
+    .results-actions {
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
+        gap: 10px;
+    }
+
+    .result-btn {
+        width: 100%;
+        padding: 13px;
+        font-size: 0.92rem;
+        text-align: center;
+    }
+
+    /* Feedback Floating Button & Bottom Sheet Modal */
+    .feedback-floating-btn {
+        bottom: max(16px, var(--safe-bottom));
+        right: 16px;
+        padding: 9px 14px;
+        font-size: 0.86rem;
+    }
+
+    .feedback-modal-backdrop {
+        padding: 0;
+        align-items: flex-end;
+    }
+
+    .feedback-modal-card {
+        border-radius: 22px 22px 0 0;
+        max-height: 88dvh;
+        padding: 20px 18px max(24px, var(--safe-bottom));
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .feedback-select,
+    .feedback-input,
+    .feedback-textarea {
+        font-size: 16px !important; /* Prevents auto-zoom on iOS */
+    }
+
+    .star-btn {
+        font-size: 1.7rem;
+        min-width: 44px;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
+
+/* Extra small devices (iPhone SE, Galaxy A series, 320px - 380px) */
+@media (max-width: 380px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+    }
+    
+    .course-card {
+        padding: 14px 12px;
+    }
+
+    .course-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 1.8rem;
+    }
+
+    .course-info h3 {
+        font-size: 1.05rem;
+    }
+
+    .quiz-body {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
 
 /* ── Cloud Computing Theme & Background ────────────────────── */
 html[data-course="cloud"] {
