@@ -64,7 +64,7 @@ export default function FeedbackSection() {
     }
 
     if (savedOnDisk) {
-      setSaveLocation('Saved directly to feedback.json on your PC! 💻');
+      setSaveLocation('Saved directly inside the feedback/ folder on your PC! 💻');
     } else {
       setSaveLocation('Saved to your browser storage! (Click below to export to PC) 💾');
     }
@@ -179,7 +179,7 @@ export default function FeedbackSection() {
             ) : (
               <form onSubmit={handleSubmit} className="feedback-form">
                 <p className="feedback-card-sub">
-                  Found a question typo, wrong solution, or have a feature idea? It saves right to your PC!
+                  Found a question typo, wrong solution, or have a feature idea? It saves right to the feedback/ folder on your PC!
                 </p>
 
                 <div className="feedback-row">

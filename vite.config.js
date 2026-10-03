@@ -11,7 +11,11 @@ function feedbackStoragePlugin() {
     name: 'feedback-storage-plugin',
     configureServer(server) {
       server.middlewares.use('/api/feedback', (req, res) => {
-        const filePath = path.resolve(__dirname, 'feedback.json')
+        const feedbackDir = path.resolve(__dirname, 'feedback')
+        if (!fs.existsSync(feedbackDir)) {
+          fs.mkdirSync(feedbackDir, { recursive: true })
+        }
+        const summaryFile = path.resolve(feedbackDir, 'feedbacks.json')
         
         if (req.method === 'POST') {
           let body = ''
@@ -24,20 +28,26 @@ function feedbackStoragePlugin() {
               data.id = 'fb_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4)
               data.createdAt = new Date().toISOString()
 
+              // 1. Update aggregated list in feedback/feedbacks.json
               let feedbacks = []
-              if (fs.existsSync(filePath)) {
+              if (fs.existsSync(summaryFile)) {
                 try {
-                  const content = fs.readFileSync(filePath, 'utf-8').trim()
+                  const content = fs.readFileSync(summaryFile, 'utf-8').trim()
                   if (content) feedbacks = JSON.parse(content)
                 } catch {
                   feedbacks = []
                 }
               }
               feedbacks.push(data)
-              fs.writeFileSync(filePath, JSON.stringify(feedbacks, null, 2), 'utf-8')
+              fs.writeFileSync(summaryFile, JSON.stringify(feedbacks, null, 2), 'utf-8')
+
+              // 2. Also write an individual JSON file for this feedback in feedback/
+              const safeName = (data.name || 'anonymous').replace(/[^a-zA-Z0-9_-]/g, '_').slice(0, 20)
+              const individualFile = path.resolve(feedbackDir, `feedback_${Date.now()}_${safeName}.json`)
+              fs.writeFileSync(individualFile, JSON.stringify(data, null, 2), 'utf-8')
 
               res.setHeader('Content-Type', 'application/json')
-              res.end(JSON.stringify({ success: true, count: feedbacks.length, feedback: data }))
+              res.end(JSON.stringify({ success: true, count: feedbacks.length, feedback: data, savedTo: individualFile }))
             } catch (err) {
               res.statusCode = 500
               res.setHeader('Content-Type', 'application/json')
@@ -47,8 +57,8 @@ function feedbackStoragePlugin() {
         } else if (req.method === 'GET') {
           try {
             let feedbacks = []
-            if (fs.existsSync(filePath)) {
-              const content = fs.readFileSync(filePath, 'utf-8').trim()
+            if (fs.existsSync(summaryFile)) {
+              const content = fs.readFileSync(summaryFile, 'utf-8').trim()
               if (content) feedbacks = JSON.parse(content)
             }
             res.setHeader('Content-Type', 'application/json')
