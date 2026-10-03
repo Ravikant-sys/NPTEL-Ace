@@ -6,6 +6,7 @@ import cloudData from '../data/cloud.json';
 import blockchainData from '../data/blockchain.json';
 import iotData from '../data/iot.json';
 import entrepreneurshipData from '../data/entrepreneurship.json';
+import FeedbackSection from '../components/FeedbackSection';
 
 const COURSES = [
   {
@@ -125,6 +126,8 @@ export default function HomePage() {
               );
             })}
           </div>
+
+          <FeedbackSection />
         </div>
       )}
 
